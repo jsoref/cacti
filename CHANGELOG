@@ -1914,7 +1914,7 @@ Cacti CHANGELOG
 -issue: Color page performance poor
 -issue: The Device dropdown on the Graph View page was unreliable
 -issue: Aggregate and non-Device Graphs in list view had not Device or Title description
--issue: Re-engineer back button design to accomocate ajax and native navigation
+-issue: Re-engineer back button design to accommodate ajax and native navigation
 -issue: Make Graph Template filter wider
 -issue: Resolve some visual issues in Classic theme
 -feature: Add page refresh API to make page refreshing in Ajax easier to accomplish
