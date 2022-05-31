@@ -645,7 +645,7 @@ Cacti CHANGELOG
 
 1.2.8
 -security#3025: CVE-2019-17357 When viewing graphs, some input variables are not properly checked (SQL injection possible)
--security#3026: CVE-2019-17358 When deserializating data, ensure basic sanitization has been performed
+-security#3026: CVE-2019-17358 When deserializing data, ensure basic sanitization has been performed
 -security#3066: When using HTTPS, secure cookie to prevent potential weakness
 -issue#1228: Any tree or branch with a long name force main content off screen
 -issue#2133: Long snmp_indexes are being cut off
