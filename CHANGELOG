@@ -260,7 +260,7 @@ Cacti CHANGELOG
 -issue#4179: Correct class usage on Graph Sidebar Icons to be consistent
 -issue#4180: Remove logoff option when using basic authentication
 -issue#4181: Ensure realm names are more consistent
--issue#4182: Allow Automatic Graph Creation to utilise Data Templates with Overriden Values
+-issue#4182: Allow Automatic Graph Creation to utilise Data Templates with Overridden Values
 -issue#4183: Processes can be terminated early due to incorrect timeout calculation
 -issue#4184: Ensure error logging is consistent when using CMD processor instead of spine
 -issue#4185: Updating Signal Handling to recommended standards for PHP 7.1+
