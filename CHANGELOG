@@ -3372,7 +3372,7 @@ Cacti CHANGELOG
 -cactid: Have autoconf detect net-snmp before trying ucd-snmp to prevent failure on default Red Hat installs.
 
 0.8.1
--bug#40: Fixed OIDs in serveral Netware data templates.
+-bug#40: Fixed OIDs in several Netware data templates.
 -bug#41: Data source and graph names are lost when created from a  template.
 -bug#44: Fixed Host MIB logged in users OID in data template.
 -bug#46: Fixed an RRDtool/PHP binary variable mixup on the install page for win32 users.
