@@ -1889,7 +1889,7 @@ Cacti CHANGELOG
 -feature: Fully implement 'Remove Orphans' from Package import process
 
 1.1.0
--issue#337: Generic SNMP OID Graph Template damanged
+-issue#337: Generic SNMP OID Graph Template damaged
 -issue#338: Extremely slow new graph/DS creation
 -issue#353: Broadcast & Multicast Packet counters missing
 -issue#376: Structured RRD path permission issues
