@@ -578,7 +578,7 @@ function get_list_of_locales() {
 		'it-IT' => array('langauge' => 'Italian',             'direction' => 'ltr', 'country' => 'it', 'filename' => 'italian_italy'),
 		'ja-JP' => array('langauge' => 'Japanese',            'direction' => 'ltr', 'country' => 'jp', 'filename' => 'japanese_japan'),
 		'ko-KR' => array('langauge' => 'Korean',              'direction' => 'ltr', 'country' => 'kr', 'filename' => 'korean_korea'),
-		'lv-LV' => array('langauge' => 'Lativan',             'direction' => 'ltr', 'country' => 'lv', 'filename' => 'latvian_latvia'),
+		'lv-LV' => array('langauge' => 'Latvian',             'direction' => 'ltr', 'country' => 'lv', 'filename' => 'latvian_latvia'),
 		'lt-LT' => array('langauge' => 'Lithuanian',          'direction' => 'ltr', 'country' => 'lt', 'filename' => 'lithuanian_lithuania'),
 		'mk-MK' => array('langauge' => 'Macedonian',          'direction' => 'ltr', 'country' => 'mk', 'filename' => 'macedonian_macedonia'),
 		'ms-MY' => array('langauge' => 'Malay',               'direction' => 'ltr', 'country' => 'my', 'filename' => 'malay_malaysia'),
