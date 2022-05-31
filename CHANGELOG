@@ -3437,7 +3437,7 @@ Cacti CHANGELOG
 
 0.6.6
 -feature: Multiple data sources per .rrd is supported. To use this feature, simply create a data input source with multiple outputs that 'Update RRA'.
--feature: Graph item grouping, which enables you to delete/reorder groups of similair graph items.
+-feature: Graph item grouping, which enables you to delete/reorder groups of similar graph items.
 -feature: Graph preview and output preview in the console, which allows you to preview what a graph will look like/what rrdtool's output is.
 -feature: Graph-based permissions have added, you can also show/hide certain hierarchies per user.
 -feature: Multiple data source per .rrd file support, read the docs for more information.
