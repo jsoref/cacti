@@ -1938,7 +1938,7 @@ function draw_aggregate_template_graph_config($aggregate_template_id, $graph_tem
 
 	html_end_box(false, true);
 
-	/* some javascript do dinamically disable non-overriden fields */
+	/* some javascript do dynamically disable non-overriden fields */
 	?>
 	<script type='text/javascript'>
 
