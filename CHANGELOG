@@ -95,7 +95,7 @@ Cacti CHANGELOG
 -issue#4383: Correct issues running under PHP 8.x
 -issue#4391: When polling is disabled, boost may crash and creates many arch tables
 -issue#4396: When poller runs, memory tables may not always be present
--issue#4400: Removal of redunant code
+-issue#4400: Removal of redundant code
 -issue#4403: Timezones may sometimes be incorrectly calculated
 -issue#4404: Allow monitoring IPv6 with interface graphs
 -issue#4408: When a data source uses a Data Input Method, those without a mapping should be flagged
