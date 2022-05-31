@@ -114,8 +114,8 @@ Cacti CHANGELOG
 -issue#4438: When Adding a Data Query to a Device, no Progress Spinner is shown
 -issue#4439: New Browser Breaks Plugins that depend on non UTC date time data
 -issue#4440: Undefined index: timeout_exceed /lib/poller.php on line: 1953
--issue#4442: When testing remote poller connectivity Errors occour
--issue#4443: When renaming poller errors occour
+-issue#4442: When testing remote poller connectivity Errors occur
+-issue#4443: When renaming poller errors occur
 -issue#4444: Removing spikes by Variance does not appear to be working beyond the first RRA
 -issue#4445: LDAP API lacks timeout options leading to bad login experiences
 -feature: Add a normal/wrap class for general use
@@ -216,7 +216,7 @@ Cacti CHANGELOG
 -issue#4074: Realtime Images are not always adhering to defined format
 -issue#4075: LDAP Settings lead to confusion when setting up LDAP authentication
 -issue#4076: MariaDB tuning link points to a dead URL within System Utilities
--issue#4077: If user has no permissions assigned and tries to login, a redirect loop occours
+-issue#4077: If user has no permissions assigned and tries to login, a redirect loop occurs
 -issue#4079: When checking current timestamps, make audit replace mysql function usage with preferred CURRENT_TIMESTAMP variable
 -issue#4080: Cacti regular expression searching does not quote expressions
 -issue#4082: RRDtool version detection not working for RRDproxy setup
