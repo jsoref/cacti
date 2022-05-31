@@ -17,7 +17,7 @@ html {
     --background-highlight: hsl(var(--hue), 19%, 17%);
     --background-progress: hsl(var(--progress-hue), 84%,40%);
     --border-color: hsla(var(--hue), 0%, 100%, 20%);
-    --border-color-hightlight: hsl(var(--hue), 0%, 75%);
+    --border-color-highlight: hsl(var(--hue), 0%, 75%);
     --scrollbar-thumb: hsl(var(--hue), 7%, 50%);
 }
 html[data-theme-color='light'] {
@@ -34,7 +34,7 @@ html[data-theme-color='light'] {
     --background-highlight: hsl(var(--special-hue), 84%, 40%);
     --background-progress: hsl(var(--black), 0%, 75%);
     --border-color: hsl(var(--hue), 0%, 75%);
-    --border-color-hightlight: hsl(var(--hue), 0%, 75%);
+    --border-color-highlight: hsl(var(--hue), 0%, 75%);
 }
 
 html[data-theme-color='light',data-theme-mode='legacy'] {
