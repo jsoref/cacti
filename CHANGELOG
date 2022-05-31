@@ -1119,7 +1119,7 @@ Cacti CHANGELOG
 -feature#1731: Prevent loss of changes by warning user about unsaved items
 -feature#1734: When displaying a graph, provide more information when error image is displayed (see also #1428)
 -feature#1763: Enable automatic refresh for Time Graph View
--feature#1806: Control low level debug routines via config.php (Develoepr Use)
+-feature#1806: Control low level debug routines via config.php (Developer Use)
 -feature#1819: Provide CLI program to enable graphs to be removed by scripts
 -feature#1969: Graph previews can now be linked using a host's external id
 -feature#2006: Introduce new Data Source Profile to handle decade long graphs
