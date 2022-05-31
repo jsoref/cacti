@@ -156,7 +156,7 @@ Cacti CHANGELOG
 -issue#4297: Unable to search using regular expressions when trying to filter graphs
 -issue#4312: When using CMD.PHP as the poller, warnings can appear if you only use a subset of data input types
 -issue#4314: When disabling the snmpagent, you can introduce significant delay to data collection
--issue#4315: Reduce repeatative warnings when resources are exhausted
+-issue#4315: Reduce repetitive warnings when resources are exhausted
 -issue#4316: Remove Spikes CLI interface is unable to provide localized spike, gap fill or float operations
 -issue#4321: Earlier versions of RRDTool do not correctly ignore previous updates
 -issue#4324: Date/Time format of replacement field on graph cannot be changed
