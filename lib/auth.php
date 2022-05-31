@@ -3168,7 +3168,7 @@ function auth_post_login_redirect($user) {
 		$newtheme = true;
 	}
 
-	/* ok, at the point the user has been sucessfully authenticated; so we must
+	/* ok, at the point the user has been successfully authenticated; so we must
 	decide what to do next */
 	switch ($user['login_opts']) {
 		case '1': /* referer */
