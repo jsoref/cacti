@@ -3404,7 +3404,7 @@ Cacti CHANGELOG
 
 0.6.8a
 -bug: Unchecked string being passed to rrdtool caused a potential security problem.
--bug: The logout funtionality was broken for some users because of a missing fourth argument.
+-bug: The logout functionality was broken for some users because of a missing fourth argument.
 -bug: Fixed some SNMP parsing problems.
 -bug: Fixed a problem with using quotes for data source input.
 
