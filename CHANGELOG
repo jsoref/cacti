@@ -3277,7 +3277,7 @@ Cacti CHANGELOG
 -bug#89: Missing "check all" checkbox on polling hosts page when an empty column was drawn.
 -bug#91: Fix undefined index errors on data source checkbox popups.
 -bug#92: Fix undefined index errors on graph management checkbox popups.
--bug#96: Problems creating graphs from data queries where there was only row row total in the query result.
+-bug#96: Problems creating graphs from data queries where there was only row total in the query result.
 -bug#97: Typo in cmd.php
 -bug#98: Creating a data source or graph with no host or template, would result in an extra empty item.
 -bug#99: Deleting a graph or data template that was still attached to one or more items would cause the graph/data source to appear to still have the deleted template still attached.
