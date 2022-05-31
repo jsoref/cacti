@@ -599,7 +599,7 @@ function upgrade_to_1_0_0() {
 			KEY `mailtime` (`mailtime`))
 			ENGINE=$engine
 			ROW_FORMAT=Dynamic
-			COMMENT='Cacri Reporting Reports'");
+			COMMENT='Cacti Reporting Reports'");
 
 		db_install_execute("CREATE TABLE IF NOT EXISTS `reports_items` (
 			`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
