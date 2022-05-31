@@ -756,7 +756,7 @@ Cacti CHANGELOG
 -issue#2832: Install/Upgrade log does not show anything
 -issue#2833: Undefined index can occur when data source does not have an snmp_index
 -issue#2834: Boost performance drops on very large systems
--issue#2835: When creating graphs and inneficient query is causing long creation times
+-issue#2835: When creating graphs and inefficient query is causing long creation times
 -issue#2837: Sunrise theme does not render checkboxes 100% correctly
 -issue#2838: jQueryMultiselect does not match upstream due to forking
 -issue#2839: Non regular expression search filters don't support international characters
