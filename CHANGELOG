@@ -1550,7 +1550,7 @@ Cacti CHANGELOG
 1.1.20
 -issue#920: Issue with scrollbars after update to 1.1.19 related to #902
 -issue#921: Tree Mode no longer expands to accomodate full tree item names
--issue#922: When using LDAP domains some setings are not passed correctly to the Cacti LDAP library
+-issue#922: When using LDAP domains some settings are not passed correctly to the Cacti LDAP library
 -issue#923: Warninga in cacti.log are displayed incorrectly
 -issue#926: Update Utilities page to provide more information on rebuilding poller cache
 -issue#927: Minor schema change to support XtraDB Cluster
