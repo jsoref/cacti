@@ -3122,7 +3122,7 @@ Cacti CHANGELOG
 -bug#0000302: Update the Windows install documentation to mention the "PHPRC" environment variable.
 -bug#0000293: Problem with the JavaScript that grays out already created graphs on the "New Graphs" page.
 -bug#0000312: Make sure that the "host_graph" table is populated in the installer for users coming from a version less than 0.8.4.
--bug#0000296: Remove references to PHP's ob_flush() function it doesn't exist until verion 4.2.
+-bug#0000296: Remove references to PHP's ob_flush() function it doesn't exist until version 4.2.
 -bug#0000314: Respect graph export timing settings.
 -bug: Problem saving a templated graph or data source that contained a checkbox field that had a value different from the default.
 -bug: Typo in graphs.php when placing graph(s) on a tree.
