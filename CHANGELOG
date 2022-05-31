@@ -1367,7 +1367,7 @@ Cacti CHANGELOG
 -issue#1300: Automation discovery : New devices added by automation discovery have empty SNMP community field
 -issue#1302: Automatic logout should not be enforced on login page
 -issue#1304: mib_cache.php file contains unsafe transactions for binary logging
--feature: CLI utilily to generate and verify file hashes for installed Cacti files
+-feature: CLI utility to generate and verify file hashes for installed Cacti files
 -feature: Logging links back to appropriate areas for troubleshooting
 -feature: Logging lists filenames in reverse order
 

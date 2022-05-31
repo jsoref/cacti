@@ -1389,7 +1389,7 @@ class Installer implements JsonSerializable {
 		set_config_option('install_next', $this->stepNext);
 	}
 
-	/* Some utiliity functions */
+	/* Some utility functions */
 
 	public function shouldRedirectToHome() {
 		return (cacti_version_compare($this->old_cacti_version,CACTI_VERSION,'='));
