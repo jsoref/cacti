@@ -53,7 +53,7 @@ class spikekill {
 	var $dsfilter  = ''; /* starts as string, changed into array */
 	var $absmax    = '';
 
-	// Overrideable
+	// Overridable
 	var $html      = true;
 	var $backup    = false;
 	var $debug     = false;
