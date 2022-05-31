@@ -139,7 +139,7 @@ Cacti CHANGELOG
 -issue#4250: Unable to create graphs due to Data Source verification failure
 -issue#4254: When poller first runs, time since last run produces an error
 -issue#4259: Data Template caching does not update and causes errors
--issue#4263: Graphs with multiple data sources can no longer display percenticles
+-issue#4263: Graphs with multiple data sources can no longer display percentiles
 -issue#4266: Incomplete items from a previous polling session may be updated twice
 -issue#4267: Unnecessary warnings appear when host name is not resolved
 -issue#4269: Installation Wizard can become stuck when creating graphs for default device
