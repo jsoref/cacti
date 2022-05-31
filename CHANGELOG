@@ -3495,7 +3495,7 @@ Cacti CHANGELOG
 -bug: Problem saving the wrong numbers for 'Round Robin Archives'.
 -feature: Ability to preview the output of the cron script from a web browser under 'Cron Printout'.
 -feature: Added 'Logout User' to the menu.
--bug: Removed some occurances of /var/www/html and replaced them with more dynamic variables.
+-bug: Removed some occurrences of /var/www/html and replaced them with more dynamic variables.
 
 0.6
 -new tree code
