@@ -168,7 +168,7 @@ function display_help() {
 	print "\nusage: import_package.php --filename=[filename] [--only-info] [--remove-orphans] [--with-profile] [--profile-id=N\n\n";
 	print "A utility to allow signed Cacti Packages to be imported from the command line.\n\n";
 	print "Required:\n";
-	print "    --filename              The name of the gziped package file to import\n\n";
+	print "    --filename              The name of the gzipped package file to import\n\n";
 	print "Optional:\n";
 	print "    --only-info       Output the info section of the package, do not import\n";
 	print "    --preview         Preview the Template Import, do not import\n";
