@@ -178,7 +178,7 @@ foreach($parms as $parameter) {
 		case '--avail':
 			switch($value) {
 				case 'none':
-					$overrides['availability_method'] = '0'; /* tried to use AVAIL_NONE, but then preg_match failes on validation, sigh */
+					$overrides['availability_method'] = '0'; /* tried to use AVAIL_NONE, but then preg_match fails on validation, sigh */
 					break;
 				case 'ping':
 					$overrides['availability_method'] = AVAIL_PING;
