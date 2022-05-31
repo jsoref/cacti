@@ -616,7 +616,7 @@ function poller_update_poller_cache_from_buffer($local_data_ids, &$poller_items,
 				array($poller_id), true, $rcnn_id);
 		}
 	} else {
-		/* only handle explicitely given local_data_ids */
+		/* only handle explicitly given local_data_ids */
 	}
 }
 
