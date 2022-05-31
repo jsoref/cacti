@@ -479,7 +479,7 @@ Cacti CHANGELOG
 -issue#3454: Cacti's Reports are not displaying messages correctly
 -issue#3457: Graphs can not properly handle negative axis values
 -issue#3459: When installing a new remote poller, connection tests can incorrectly fail
--issue#3460: Addtional changes to allow plugin folder/display names to be handled better
+-issue#3460: Additional changes to allow plugin folder/display names to be handled better
 -issue#3462: Increase default memory limit for cli scripts to prevent runtime memory issues
 -issue#3463: When listing VDEF's, selecting 'has graph' can cause unexpected exceptions in logs
 -issue#3468: Graph rules cannot be created for automation
