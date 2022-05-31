@@ -830,7 +830,7 @@ function upgrade_to_1_0_0() {
 		$data['keys'][]    = '';
 		$data['type']      = $engine;
 		$data['row_format'] = 'Dynamic';
-		$data['comment']   = 'Aggregate Graph Graph Items';
+		$data['comment']   = 'Aggregate Graph Items';
 		db_table_create ('plugin_aggregate_graphs_graph_item', $data);
 
 		/* TODO should this go in a seperate upgrade function? */

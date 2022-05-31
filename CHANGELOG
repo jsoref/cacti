@@ -1952,7 +1952,7 @@ Cacti CHANGELOG
 -issue#380: Ignores a non-standard SNMP port
 -issue#382: When using php5.5+ new users unable to change their password
 -issue#384: graph_view.php backtrace errors
--issue#385: Unable to place an aggregate grapn on a subtree
+-issue#385: Unable to place an aggregate graph on a subtree
 -issue#390: Display graphs from this aggregate icon next to graph not displaying
 -issue#392: cdef.php missing sql where for system cdef's
 -issue#398: checkbox is not honored when creating tree
