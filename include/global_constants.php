@@ -516,7 +516,7 @@ if (defined('CACTI_CLI_ONLY')) {
 	define('CLI_SGR_BLINK_FAST',  6);   # rapid blink
 
 	# color. these are SGR sequences, so as noted above, those need to
-	# be concluded with CLI_SGR_END. ommitted 'SGR' from constant name to keep at
+	# be concluded with CLI_SGR_END. omitted 'SGR' from constant name to keep at
 	# least some semblance of brevity.
 	# basic 8 foreground colors
 	define('CLI_FG_BLACK',           30);
