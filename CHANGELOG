@@ -2700,7 +2700,7 @@ Cacti CHANGELOG
 -bug#0001161: Re-assign duplicate radio button IDs
 -bug#0001164: Add HTML title attributes for certain pages
 -bug#0001168: ALL_DATA_SOURCES_NODUPS includes DUPs? SIMILAR_DATA_SOURCES_DUPS is available again
--bug: Cacti does not guarentee RRA consolidation functions exist in RRA's
+-bug: Cacti does not guarantee RRA consolidation functions exist in RRA's
 -bug: Alert on changing logarithmic scaling removed
 -bug: add_hosts.php did not accept privacy protocol
 -security: Fix several security vulnerabilities
