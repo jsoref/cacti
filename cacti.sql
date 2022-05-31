@@ -2979,7 +2979,7 @@ CREATE TABLE `snmpagent_cache_notifications` (
   `sequence_id` smallint(6) NOT NULL,
   PRIMARY KEY (`name`,`mib`,`attribute`,`sequence_id`),
   KEY `name` (`name`)
-) ENGINE=InnoDB ROW_FORMAT=Dynamic COMMENT='Notifcations and related attributes';
+) ENGINE=InnoDB ROW_FORMAT=Dynamic COMMENT='Notifications and related attributes';
 
 --
 -- Dumping data for table `snmpagent_cache_notifications`
