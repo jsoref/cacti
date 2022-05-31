@@ -501,7 +501,7 @@ if (defined('CACTI_CLI_ONLY')) {
 	# control characters primarily of use for TUI's. Search the net for a
 	# comprehensive reference on these, in here we need to be brief. basically
 	# you'll begin with a CSI, followed by parameters, and end with a particular
-	# "command" (which essientially dictates what the preceeding parameters do).
+	# "command" (which essentially dictates what the preceeding parameters do).
 	define('CLI_CSI',             CLI_ESC . "\x5B"); # begin a control sequence
 
 	# these are shorthands and conclude a sequence directly
