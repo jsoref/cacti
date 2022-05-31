@@ -35,7 +35,7 @@ function exec_poll($command) {
 			$fp = popen($command, 'rb');
 		}
 
-		/* return if the popen command was not successfull */
+		/* return if the popen command was not successful */
 		if (!is_resource($fp)) {
 			cacti_log('WARNING; Problem with POPEN command.', false, 'POLLER');
 			return 'U';
@@ -95,7 +95,7 @@ function exec_poll_php($command, $using_proc_function, $pipes, $proc_fd) {
 				$fp = popen($command, 'rb');
 			}
 
-			/* return if the popen command was not successfull */
+			/* return if the popen command was not successful */
 			if (!is_resource($fp)) {
 				cacti_log('WARNING; Problem with POPEN command.', false, 'POLLER');
 				return 'U';
