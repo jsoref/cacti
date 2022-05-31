@@ -322,7 +322,7 @@ function mapDevices($siteId, $doMap) {
 	}
 
 	if ($ipMapRegex && !preg_match('/^\/.+\//',$ipMapRegex)) {
-		# Make it more restrictive too - add the ^ and $ anchors if the regex isn't specified correctly to stop sillyness
+		# Make it more restrictive too - add the ^ and $ anchors if the regex isn't specified correctly to stop silliness
 		$ipMapRegex = '/^'.$ipMapRegex.'$/';
 	}
 
