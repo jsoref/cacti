@@ -775,7 +775,7 @@ Cacti CHANGELOG
 -issue#2869: When creating aggregates from Graphs, JavaScript issues can occur
 -issue#2872: Add support for MySQL 8 and use of grouping as name for a column
 -issue#2875: Undefined variable when removing spikes in some cases
--issue#2877: When attempting to send report, undefined function 'get_tinespan' messages appear
+-issue#2877: When attempting to send report, undefined function 'get_timespan' messages appear
 -issue#2878: Function get_magic_quotes_gpc() is now deprecated in PHP 7.4
 -issue#2879: Switching from authPriv to authNoPriv produces error when saving
 -issue#2884: Replication continues to occur when poller has been disabled
@@ -1996,7 +1996,7 @@ Cacti CHANGELOG
 -issue: Fixed issues with Paw theme
 -issue: Fix timespan calculation
 -issue: Added misplaced join condition when generating RRDtool graphs
--issue: Fix the selection of timestan based on local_graph_id and rra_id
+-issue: Fix the selection of timespan based on local_graph_id and rra_id
 -issue: Correct error in discovery not adding devices
 -issue: Action message did not always display
 -issue: fix regex to use Domains like www.t-online.de
