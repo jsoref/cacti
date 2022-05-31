@@ -2570,7 +2570,7 @@ Cacti CHANGELOG
 -bug#0001191: Faulty IP address validation by ping.php script
 -bug#0001180: Graph Export to CSV failed by using IE 6 SP2
 -bug#0001194: RRDtool URL is incorrect on the about page
--bug#0001204: Since upgrade to 0.87b the hosts with ip address with 255 are down and have no datas
+-bug#0001204: Since upgrade to 0.87b the hosts with ip address with 255 are down and have no data
 -bug#0001206: Graphs are not zoom-able with PHP warnings turned on
 -bug#0001211: Allow use of "REMOTE_USER" if "PHP_AUTH_USER" is not set for authentication
 -bug#0001213: Template Copy does not hash copied template_items
