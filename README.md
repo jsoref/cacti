@@ -36,7 +36,7 @@ is now.  When The Cacti Group went about engineering Cacti 1.x, a decision was
 made to force users to use the InnoDB storage engine for many of the Tables.  This
 was done as the InnoDB storage engine provides a better user experience when your
 web site has several concurrent logins.  Though a little slower, it also provides
-greater resiliancy for the developers.
+greater resiliency for the developers.
 
 With that said, there are several changes that you MUST perform to MySQL/MariaDB 
 before you upgrade, and a service restart is required.  Depending on your release
