@@ -833,7 +833,7 @@ function upgrade_to_1_0_0() {
 		$data['comment']   = 'Aggregate Graph Items';
 		db_table_create ('plugin_aggregate_graphs_graph_item', $data);
 
-		/* TODO should this go in a seperate upgrade function? */
+		/* TODO should this go in a separate upgrade function? */
 		/* Create table holding aggregate template graph params */
 		$data = array();
 		$data['columns'][] = array('name' => 'aggregate_template_id', 'type' => 'int(10)', 'unsigned' => 'unsigned', 'NULL' => false);
@@ -878,7 +878,7 @@ function upgrade_to_1_0_0() {
 		$data['comment']   = 'Aggregate Template Graph Data';
 		db_table_create ('plugin_aggregate_graph_templates_graph', $data);
 
-		/* TODO should this go in a seperate upgrade function? */
+		/* TODO should this go in a separate upgrade function? */
 		/* Add cfed and graph_type override columns to aggregate tables */
 		$columns = array();
 		$columns[] = array('name' => 't_graph_type_id', 'type' => 'char(2)', 'default' => '', 'after' => 'color_template');
