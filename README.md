@@ -88,7 +88,7 @@ upgrading.  The settings with XXX, Cacti will provide a recommendation at upgrad
 It is not out of the ordinary to have to restart MySQL/MariaDB during the upgrade
 to tune these settings.  Please make special note of this before you begin your upgrade.
 
-Before you upgrade, you should make these required changes, then restart MySQL/MariaDB.  After that, you can save yourself some time and poential errors by running the following scripts (assuming you are using bash):
+Before you upgrade, you should make these required changes, then restart MySQL/MariaDB.  After that, you can save yourself some time and potential errors by running the following scripts (assuming you are using bash):
 
 ```
 for table in `mysql -e "SELECT TABLE_NAME FROM information_schema.TABLES WHERE table_schema='cacti' AND engine!='MEMORY'" cacti | grep -v TABLE_NAME`;
