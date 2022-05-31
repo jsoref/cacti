@@ -375,8 +375,8 @@ if (get_nfilter_request_var('action') == 'login') {
 			}
 		}
 
-		if (user_setting_exists('user_language', $_SESSION['sess_user_id'])) {
-			$_SESSION['sess_user_language'] = read_user_setting('user_language');
+		if (user_setting_exists('user_langauge', $_SESSION['sess_user_id'])) {
+			$_SESSION['sess_user_langauge'] = read_user_setting('user_langauge');
 		}
 
 		auth_login_redirect($user['login_opts']);

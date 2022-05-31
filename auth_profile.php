@@ -218,7 +218,7 @@ function api_auth_update_user_setting($name, $value) {
 
 					kill_session_var('sess_user_config_array');
 					kill_session_var('selected_theme');
-					kill_session_var('sess_user_language');
+					kill_session_var('sess_user_langauge');
 
 					break;
 				}
@@ -263,7 +263,7 @@ function form_save() {
 	}
 
 	/* reset local settings cache so the user sees the new settings */
-	kill_session_var('sess_user_language');
+	kill_session_var('sess_user_langauge');
 	kill_session_var('sess_user_config_array');
 	kill_session_var('selected_theme');
 }
@@ -642,7 +642,7 @@ function settings_javascript() {
 	var themeFonts   = <?php print read_config_option('font_method');?>;
 	var currentTab   = '<?php print get_nfilter_request_var('tab');?>';
 	var currentTheme = '<?php print get_selected_theme();?>';
-	var currentLang  = '<?php print read_config_option('user_language');?>';
+	var currentLang  = '<?php print read_config_option('user_langauge');?>';
 
 	function clearUserSettings() {
 		$.get('auth_profile.php?action=clear_user_settings', function() {
@@ -770,7 +770,7 @@ function settings_javascript() {
 
 							if (id != undefined) {
 								$.get('auth_profile.php?tab='+currentTab+'&action=reset_default&name='+id, function(data) {
-									if (id != 'selected_theme' && id != 'user_language' && id != 'enable_hscroll') {
+									if (id != 'selected_theme' && id != 'user_langauge' && id != 'enable_hscroll') {
 										if ($('#'+id).is(':checkbox')) {
 											if (data == 'on') {
 												$('#'+id).prop('checked', true);
@@ -837,7 +837,7 @@ function settings_javascript() {
 				handle: false
 			}
 
-			if (name == 'selected_theme' || name == 'user_language') {
+			if (name == 'selected_theme' || name == 'user_langauge') {
 				options.redirect = 'auth_profile.php?action=edit';
 			}
 

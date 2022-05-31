@@ -499,7 +499,7 @@ Cacti CHANGELOG
 -issue#3507: Changes to JavaScript's Storage API cause exceptions to be thrown
 -issue#3510: Only guests can actually guest only pages, logged in users are denied access incorrectly
 -issue#3512: When plugins update, registered files list cannot always be updated
--issue#3520: When viewing graphs, shifting time does not work when using non-english languages
+-issue#3520: When viewing graphs, shifting time does not work when using non-english langauges
 -issue#3576: LDAP Authentication succeeds, but login fails due to bad session handling
 -issue#3629: Log files are not rotated properly on remote pollers
 -feature#3480: Created 'custom_denied' hook to allow customisation of permission denied notifications
@@ -520,7 +520,7 @@ Cacti CHANGELOG
 -issue#2853: Discovered Devices filtering do not include snmp description or name
 -issue#3231: Allow user to unlock a tree that has been locked for editing by another
 -issue#3237: Report gets resent every poller cycle
--issue#3247: Language source files do not update "PO-Revision-Date" attribute
+-issue#3247: Langauge source files do not update "PO-Revision-Date" attribute
 -issue#3261: Automation rules aren't run for new devices on remote data collectors
 -issue#3296: Bad PHP memory limit values can result in failed upgrades
 -issue#3299: When using php-snmp and setting SNMPv3, warning is now shown as library does not support it properly
@@ -587,7 +587,7 @@ Cacti CHANGELOG
 -issue#3253: Upgrade can stall when checking permissions on csrf-secret.php
 -issue#3254: Installer shows script owner rather than running user for suggested chown command
 -issue#3266: When setting User Groups to 'Defer to the User', setting can lead to user being told they have no permissions
--issue#3269: When searching Graphs under a Chinese language, an unexpected error as sometimes shown
+-issue#3269: When searching Graphs under a Chinese langauge, an unexpected error as sometimes shown
 -issue#3274: When editing a tree, multiple device drag/drop does not work
 -issue#3276: When spine aborts, script server can be left wanting or generating unnecessary logs
 -issue#3277: When boost does not find an initial time, numeric errors can be raised
@@ -662,7 +662,7 @@ Cacti CHANGELOG
 -issue#3012: When viewing realtime graphs, some input variables are not properly checked
 -issue#3013: Allow legends to be modified for Aggregate Graphs
 -issue#3017: Automation network range with spaces fails validation
--issue#3019: User selected language is not always adhered to
+-issue#3019: User selected langauge is not always adhered to
 -issue#3021: Tree view cuts off at the bottom of page on modern theme
 -issue#3023: When clicking highlighted tab, side panel is not always shown/hidden correctly
 -issue#3027: Aggregate Graph re-ordering does not work
@@ -802,7 +802,7 @@ Cacti CHANGELOG
 -issue#2656: GPRINT text_format does not replace Data Query and Host Fields
 -issue#2661: Automation does not always calculate network range/subnet correctly
 -issue#2663: Some legacy Data Queries can not determine their index order causing broken graphs
--issue#2674: Large strings can sometimes cause language translation can fail
+-issue#2674: Large strings can sometimes cause langauge translation can fail
 -issue#2719: Automation may sometimes create empty graphs
 -issue#2721: When replacing '|input_xxxx|' strings, undefined index can occur
 -issue#2722: Calls to _db_replace() are not consistent resulting in warnings
@@ -865,7 +865,7 @@ Cacti CHANGELOG
 1.2.4
 -issue#2523: Send A Test Email stops working under PHP 7.3
 -issue#2589: Missing RRD file can cause DSSTATS to throw errors
--issue#2590: When installing, chosen language is sometimes lost
+-issue#2590: When installing, chosen langauge is sometimes lost
 -issue#2591: Menu selection does not always match selected page/section
 -issue#2592: When viewing an aggregate graph, 'Display graphs from this aggregate' option does always not work
 -issue#2593: Unable to migrate aggregate graphs to matching aggregate template
@@ -1269,7 +1269,7 @@ Cacti CHANGELOG
 -issue#1464: Poller stuck in infinitely loop causing excess logging
 -issue#1466: No scrollbars in mobile browsers
 -issue#1468: Increase max length of host.snmp_sysObjectID column
--issue#1471: Undefined function found in global_languages.php
+-issue#1471: Undefined function found in global_langauges.php
 -issue#1472: Change Device Options - Style needs updating
 -issue#1474: Check possibility for creation of temporary tables on install
 -issue#1487: Undefined constant in ldap.php
@@ -1284,7 +1284,7 @@ Cacti CHANGELOG
 1.1.36
 -issue#934: Template names missing in graph management list
 -issue#1211: CDEF and VDEF Item Edit do not use correct procedures
--issue#1250: Language support does not support localization properly
+-issue#1250: Langauge support does not support localization properly
 -issue#1331: Log Rotation should occur at midnight on system
 -issue#1334: Console->Users->(Edit) Permissions checkmark descriptions missing
 -issue#1336: Debian test suite reports php error
@@ -1376,7 +1376,7 @@ Cacti CHANGELOG
 
 1.1.32
 -issue#969: Undefined index: color_id / task_item when viewing graphs
--issue#1166: Fix typo of 'locale' in global_languages.php
+-issue#1166: Fix typo of 'locale' in global_langauges.php
 -issue#1222: Graphs with large number of items causes RRDTool to error
 -issue#1230: PHP Fatal error: Call to undefined function get_max_tree_sequence()
 -issue#1238: SNMP functions fail to handle "Invalid object identifier" error
@@ -1395,7 +1395,7 @@ Cacti CHANGELOG
 -issue#629: Site reload after delete the last letter in the searchbar
 -issue#1022: Discovery network stuck in "running" state does not return results
 -issue#1164: Version compare function fails on major/minor only versions
--issue#1166: Invalid New User default language selection
+-issue#1166: Invalid New User default langauge selection
 -issue#1175: Automatic logout inconsistent redirect
 -issue#1179: Warn during installation if installing moving to older version
 -issue#1183: Automatically detect missing Theme and use alternate
@@ -1424,7 +1424,7 @@ Cacti CHANGELOG
 -issue#1158: Change CLOG to use regex replacement so line details are not mangled
 -issue#1161: Graph View regex's are not preserved during automatic page refresh
 -issue#1162: Error messages are not display when editing a user
--issue#1166: Default language was not correctly set when editing a user
+-issue#1166: Default langauge was not correctly set when editing a user
 -issue: basename function undefined during upgrade to 1.0.x
 -issue: Storage API and translations required for Change password function
 -issue: ALTER IGNORE still throws an error when attempting to drop the primary key
@@ -1597,7 +1597,7 @@ Cacti CHANGELOG
 -issue#897: Due to browser use of special key, deprecate ctrl-shift-x for clearing filter
 -issue#898: Issue with tcp and udp ping due to file description allocation changes
 -issue: Unable use ipv6 ip addresses for snmp ping in the Cacti GUI
--issue: Update language of the Rebuild Poller Cache menu pick
+-issue: Update langauge of the Rebuild Poller Cache menu pick
 -issue: Broken design for input controls with Sunrise theme
 -issue: Timespan switching not switching to Custom in Preview Mode
 -issue: Log rotation would not occur under certain conditions.  Provide more control over log functions
@@ -1609,7 +1609,7 @@ Cacti CHANGELOG
 -issue#872: Can't add device items to graphs generated with no device and no template
 -issue#875: When modifying Realm permissions, realms that are listed multiple times don't stay in sync
 -issue#877: Improving resolution to issue#847 and one additional vulnerability
--issue#878: Ambiguous language in purge log function
+-issue#878: Ambiguous langauge in purge log function
 -issue#879: SQL Error when adding a report item to a report
 -issue#880: Device drop down is limited to 20 devices and lacks a scroll bar
 -issue#885: Graph generated with no device and no graph template forgets device definitions
@@ -1657,7 +1657,7 @@ Cacti CHANGELOG
 -issue: Fix SNMPAgent MIB cache issues
 -issue: Realtime cache cleanup now only removes rrd and png
 -issue: When redirected from reports, you can receive a validation error
--feature: updated Dutch language
+-feature: updated Dutch langauge
 
 1.1.12
 -issue#822: Aggregate Graph Items are incorrectly editable
@@ -1725,7 +1725,7 @@ Cacti CHANGELOG
 -issue#740: Spacer manipulation broken after update to responsive forms
 -issue#741: Errors in dsstats with very large RRDfiles with more than 60 data sources
 -issue#748: Search results are not cleared on Aggregates
--issue#754: Default Language for user and system are not set on new installation
+-issue#754: Default Langauge for user and system are not set on new installation
 -issue#755: RRDtool Graph Watermark is incorrect
 -issue#756: Resolving some translation issues
 -issue#763: Template Export not functional
@@ -1765,7 +1765,7 @@ Cacti CHANGELOG
 -issue: Reports were not using Cacti's permission system for checking access
 -issue: User Admin page reported wrong permissions at Tree level missing some i18n as well
 -issue: Short data_name can cause data collection issues
--feature: Updated Dutch language
+-feature: Updated Dutch langauge
 -feature: Updating PHPMailer to 5.2.23
 -feature: Support input-output Data Query types
 -feature: Introduce new get_cacti_version() to reduce database calls on pages
@@ -1784,7 +1784,7 @@ Cacti CHANGELOG
 -issue: Remove tabindex and other non-required manual aria controls from pages
 -issue: Table type and column type in poller_output table wrong
 -issue: FILTER_VALIDATE_MAC not defined on PHP less than 5.5
--issue: When changing your language Cacti would not do a full page refresh
+-issue: When changing your langauge Cacti would not do a full page refresh
 -feature#106: Paginated CLOG and log administration
 -feature: Dutch translations
 -feature: Responsive Graphs page

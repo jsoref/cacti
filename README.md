@@ -46,7 +46,7 @@ enabled as default:
 ```
 [mysqld]
 
-# required for multiple language support
+# required for multiple langauge support
 character-set-server = utf8mb4
 collation-server = utf8mb4_unicode_ci
 

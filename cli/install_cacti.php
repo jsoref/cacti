@@ -118,10 +118,10 @@ if (cacti_sizeof($parms)) {
 			case '--install':
 				$should_install = true;
 				break;
-			case '--language':
+			case '--langauge':
 			case '--lang':
 			case '-l':
-				set_install_option($options, 'Language', 'Language', $value);
+				set_install_option($options, 'Langauge', 'Langauge', $value);
 				break;
 			case '--mode':
 			case '-m':
@@ -338,7 +338,7 @@ function display_version() {
 function display_help () {
 	print PHP_EOL . 'usage: install_cacti.php [--debug] --accept-eula ' . PHP_EOL;
 	print '                         [--automationmode=] [--automationrange=] [--cron=]' . PHP_EOL;
-	print '                         [--language=] [--mode=] [--profile=] [--path=]' . PHP_EOL;
+	print '                         [--langauge=] [--mode=] [--profile=] [--path=]' . PHP_EOL;
 	print '                         [--rrdtool=] [--snmp=] [--table=] [--template=]' . PHP_EOL;
 	print '                         [--theme=]' . PHP_EOL;
 	print PHP_EOL . 'A utility to install/upgrade Cacti to the currently sourced version' . PHP_EOL;
@@ -354,7 +354,7 @@ function display_help () {
 	print '  -am | --automationmode  - Enable/Disable automatic network discovery' . PHP_EOL;
 	print '  -ar | --automationrange - Set automatic network discovery subnet' . PHP_EOL;
 	print '  -c  | --cron            - Set the cron interval' . PHP_EOL;
-	print '  -l  | --lang[uage]      - Set system language' . PHP_EOL;
+	print '  -l  | --lang[uage]      - Set system langauge' . PHP_EOL;
 	print '  -m  | --mode            - Set the installation mode' . PHP_EOL;
 	print '  -p  | --profile         - Set the default Data Collector profile' . PHP_EOL;
 	print '  -r  | --rrdtool         - Set the RRD Tool version' . PHP_EOL;

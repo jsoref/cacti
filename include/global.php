@@ -496,7 +496,7 @@ if ((bool)ini_get('register_globals')) {
 
 define('CACTI_DATE_TIME_FORMAT', date_time_format());
 
-include_once($config['include_path'] . '/global_languages.php');
+include_once($config['include_path'] . '/global_langauges.php');
 
 define('CACTI_VERSION_BRIEF', get_cacti_version_text(false,CACTI_VERSION));
 define('CACTI_VERSION_BRIEF_FULL', get_cacti_version_text(false,CACTI_VERSION_FULL));

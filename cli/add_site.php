@@ -552,7 +552,7 @@ function fetchCurl($url){
 	$header[] = "Connection: keep-alive";
 	$header[] = "Keep-Alive: 300";
 	$header[] = "Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7";
-	$header[] = "Accept-Language: en-us,en;q=0.5";
+	$header[] = "Accept-Langauge: en-us,en;q=0.5";
 
 
 	curl_setopt($curl, CURLOPT_URL, $url);

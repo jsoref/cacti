@@ -45,11 +45,11 @@ function escape_command($command) {
 	#TODO return preg_replace((\\\$(?=\w+|\*|\@|\#|\?|\-|\\\$|\!|\_|[0-9]|\(.*\))|`(?=.*(?=`)))","$2", $command);  #suggested by ldevantier to allow for a single $
 }
 
-/** set the language environment variable for rrdtool functions
- * @param string $lang		- the desired language to set
+/** set the langauge environment variable for rrdtool functions
+ * @param string $lang		- the desired langauge to set
  * @return null
  */
-function rrdtool_set_language($lang = -1) {
+function rrdtool_set_langauge($lang = -1) {
 	global $prev_lang;
 
 	$prev_lang = getenv('LANG');
@@ -61,10 +61,10 @@ function rrdtool_set_language($lang = -1) {
 	}
 }
 
-/** restore the default language environment variable after rrdtool functions
+/** restore the default langauge environment variable after rrdtool functions
  * @return null
  */
-function rrdtool_reset_language() {
+function rrdtool_reset_langauge() {
 	global $prev_lang;
 
 	putenv('LANG=' . $prev_lang);
@@ -87,7 +87,7 @@ function __rrd_init($output_to_term = true) {
 		putenv('RRD_DEFAULT_FONT=' . read_config_option('path_rrdtool_default_font'));
 	}
 
-	rrdtool_set_language();
+	rrdtool_set_langauge();
 
 	if ($output_to_term) {
 		$command = read_config_option('path_rrdtool') . ' - ';
@@ -193,7 +193,7 @@ function __rrd_close($rrdtool_pipe) {
 		pclose($rrdtool_pipe);
 	}
 
-	rrdtool_reset_language();
+	rrdtool_reset_langauge();
 }
 
 function __rrd_proxy_close($rrdp) {
@@ -298,9 +298,9 @@ function __rrd_execute($command_line, $log_to_stdout, $output_flag, $rrdtool_pip
 	/* an empty $rrdtool_pipe array means no fp is available */
 	if (!is_resource($rrdtool_pipe)) {
 		if (substr($command_line, 0, 5) == 'fetch' || substr($command_line, 0, 4) == 'info') {
-			rrdtool_set_language('en');
+			rrdtool_set_langauge('en');
 		} else {
-			rrdtool_set_language();
+			rrdtool_set_langauge();
 		}
 
 		cacti_session_close();
@@ -323,7 +323,7 @@ function __rrd_execute($command_line, $log_to_stdout, $output_flag, $rrdtool_pip
 			cacti_log("ERROR: RRDtool executable not found, not executable or error in path '" . read_config_option('path_rrdtool') . "'.  No output written to RRDfile.");
 		}
 
-		rrdtool_reset_language();
+		rrdtool_reset_langauge();
 	} else {
 		$i = 0;
 		while (1) {
@@ -1862,7 +1862,7 @@ function rrdtool_function_graph($local_graph_id, $rra_id, $graph_data_array, $rr
 					}
 				}
 
-				/* allow automatic rate calculations on raw guage data */
+				/* allow automatic rate calculations on raw gauge data */
 				if (isset($graph_item['local_data_id'])) {
 					$cdef_string = str_replace('CURRENT_DATA_SOURCE_PI', db_fetch_cell_prepared('SELECT rrd_step FROM data_template_data WHERE local_data_id = ?', array($graph_item['local_data_id'])), $cdef_string);
 				} else {
@@ -1871,7 +1871,7 @@ function rrdtool_function_graph($local_graph_id, $rra_id, $graph_data_array, $rr
 
 				$cdef_string = str_replace('CURRENT_DATA_SOURCE', generate_graph_def_name(strval((isset($cf_ds_cache[$graph_item['data_template_rrd_id']][$cf_id]) ? $cf_ds_cache[$graph_item['data_template_rrd_id']][$cf_id] : '0'))), $cdef_string);
 
-				/* allow automatic rate calculations on raw guage data */
+				/* allow automatic rate calculations on raw gauge data */
 				if (isset($graph_item['local_data_id'])) {
 					$cdef_string = str_replace('ALL_DATA_SOURCES_DUPS_PI', db_fetch_cell_prepared('SELECT rrd_step FROM data_template_data WHERE local_data_id = ?', array($graph_item['local_data_id'])), $cdef_string);
 				} else {
@@ -1883,7 +1883,7 @@ function rrdtool_function_graph($local_graph_id, $rra_id, $graph_data_array, $rr
 					$cdef_string = str_replace('ALL_DATA_SOURCES_DUPS', $magic_item['ALL_DATA_SOURCES_DUPS'], $cdef_string);
 				}
 
-				/* allow automatic rate calculations on raw guage data */
+				/* allow automatic rate calculations on raw gauge data */
 				if (isset($graph_item['local_data_id'])) {
 					$cdef_string = str_replace('ALL_DATA_SOURCES_NODUPS_PI', db_fetch_cell_prepared('SELECT rrd_step FROM data_template_data WHERE local_data_id = ?', array($graph_item['local_data_id'])), $cdef_string);
 				} else {
@@ -1894,7 +1894,7 @@ function rrdtool_function_graph($local_graph_id, $rra_id, $graph_data_array, $rr
 					$cdef_string = str_replace('ALL_DATA_SOURCES_NODUPS', $magic_item['ALL_DATA_SOURCES_NODUPS'], $cdef_string);
 				}
 
-				/* allow automatic rate calculations on raw guage data */
+				/* allow automatic rate calculations on raw gauge data */
 				if (isset($graph_item['local_data_id'])) {
 					$cdef_string = str_replace('SIMILAR_DATA_SOURCES_DUPS_PI', db_fetch_cell_prepared('SELECT rrd_step FROM data_template_data WHERE local_data_id = ?', array($graph_item['local_data_id'])), $cdef_string);
 				} else {
