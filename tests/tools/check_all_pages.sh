@@ -107,7 +107,7 @@ save_log_files() {
 }
 
 # ------------------------------------------------------------------------------
-# Some functions to handle settings consitently
+# Some functions to handle settings consistently
 # ------------------------------------------------------------------------------
 set_cacti_admin_password() {
 	mysql -u"$database_user" -p"$database_pw" -e "UPDATE user_auth SET password=MD5('$login_pw') WHERE id = 1" cacti 2>/dev/null
