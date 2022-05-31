@@ -1220,7 +1220,7 @@ class Installer implements JsonSerializable {
 	}
 
 	/* setTables - sets a list of tables to be converted to the latest
-	 *             default coallition
+	 *             default coalition
 	 * @param_tables - array of table names
 	 *
 	 * Errors: does not add errors as a table may not be present in the
