@@ -3400,7 +3400,7 @@ Cacti CHANGELOG
 -feature: Added support for net-snmp 5.x.
 -docs: Revised the install documentation and re-wrote the manual for this version.
 -feature: The beginnings of a threaded c-based poller (cactid), which is not completely function at this point.
--feature: And much much more...
+-feature: And much more...
 
 0.6.8a
 -bug: Unchecked string being passed to rrdtool caused a potential security problem.
