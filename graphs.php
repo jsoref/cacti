@@ -619,7 +619,7 @@ function form_actions() {
 					$item_no = form_input_validate(get_nfilter_request_var('item_no'), 'item_no', '^[0-9]+$', true, 3);
 
 					$ag_data['aggregate_template_id'] = 0;
-					$ag_data['template_propogation']  = '';
+					$ag_data['template_propagation']  = '';
 					$ag_data['graph_template_id']     = form_input_validate(get_nfilter_request_var('graph_template_id'), 'graph_template_id', '^[0-9]+$', true, 3);
 					$ag_data['gprint_prefix']         = form_input_validate(get_nfilter_request_var('gprint_prefix'), 'gprint_prefix', '', true, 3);
 					$ag_data['graph_type']            = form_input_validate(get_nfilter_request_var('aggregate_graph_type'), 'aggregate_graph_type', '^[0-9]+$', true, 3);
@@ -639,7 +639,7 @@ function form_actions() {
 						array(get_nfilter_request_var('aggregate_template_id')));
 
 					$ag_data['aggregate_template_id'] = get_nfilter_request_var('aggregate_template_id');
-					$ag_data['template_propogation']  = 'on';
+					$ag_data['template_propagation']  = 'on';
 					$ag_data['graph_template_id']     = $template_data['graph_template_id'];
 					$ag_data['gprint_prefix']         = $template_data['gprint_prefix'];
 					$ag_data['graph_type']            = $template_data['graph_type'];

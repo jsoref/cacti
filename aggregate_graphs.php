@@ -110,7 +110,7 @@ function form_save() {
 		WHERE local_graph_id = ?', array($local_graph_id));
 
 	/* if user disabled template propagation we need to get graph data from form */
-	if (!isset_request_var('template_propogation')) {
+	if (!isset_request_var('template_propagation')) {
 		$aggregate_template_id = 0;
 		$new_data = aggregate_validate_graph_params($_POST, false);
 	} else {
@@ -142,12 +142,12 @@ function form_save() {
 	 * if the graph is templates, we can simply ignore.  A simple check will
 	 * determine if aggregation propagation is enabled
 	 */
-	if (!isset_request_var('template_propogation')) {
+	if (!isset_request_var('template_propagation')) {
 		/* template propagation is disabled */
 		$save                          = array();
 		$save['id']                    = $aggregate_graph_id;
 		$save['aggregate_template_id'] = $aggregate_template_id;
-		$save['template_propogation']  = '';
+		$save['template_propagation']  = '';
 		$save['gprint_prefix']         = get_nfilter_request_var('gprint_prefix');
 		$save['gprint_format']         = isset_request_var('gprint_format') ? 'on':'';
 		$save['total_prefix']          = get_nfilter_request_var('total_prefix');
@@ -167,7 +167,7 @@ function form_save() {
 			$save_me = 0;
 
 			$save_me += ($old['aggregate_template_id'] != $save['aggregate_template_id']);
-			$save_me += ($old['template_propogation']  != $save['template_propogation']);
+			$save_me += ($old['template_propagation']  != $save['template_propagation']);
 			$save_me += ($old['gprint_prefix']         != $save['gprint_prefix']);
 			$save_me += ($old['gprint_format']         != $save['gprint_format']);
 			$save_me += ($old['graph_type']            != $save['graph_type']);
@@ -912,11 +912,11 @@ function graph_edit() {
 			];
 
 			$(function() {
-				if ($('input[id^="agg_total"]').is(':checked') || $('#template_propogation').is(':checked')) {
+				if ($('input[id^="agg_total"]').is(':checked') || $('#template_propagation').is(':checked')) {
 					$('#agg_preview').show();
 				}
 
-				if ($('#template_propogation').is(':checked')) {
+				if ($('#template_propagation').is(':checked')) {
 					for (var i = 0; i < templated_selectors.length; i++) {
 						$(templated_selectors[i]).prop('disabled', true).addClass('ui-state-disabled');
 						if ($(templated_selectors[i]).selectmenu('instance')) {
@@ -924,7 +924,7 @@ function graph_edit() {
 						}
 					}
 				} else {
-					$('#row_template_propogation').hide();
+					$('#row_template_propagation').hide();
 					$('#row_spacer0').hide();
 				}
 
@@ -956,8 +956,8 @@ function graph_edit() {
 					changeTotalsType();
 				});
 
-				$('#template_propogation').change(function() {
-					if (!$('#template_propogation').is(':checked')) {
+				$('#template_propagation').change(function() {
+					if (!$('#template_propagation').is(':checked')) {
 						for (var i = 0; i < templated_selectors.length; i++) {
 							$(templated_selectors[i]).prop('disabled', false);
 						}
@@ -1549,7 +1549,7 @@ function aggregate_graph() {
 	}
 
 	$(function() {
-		if ($('input[id^="agg_total"]').is(':checked') || $('#template_propogation').is(':checked')) {
+		if ($('input[id^="agg_total"]').is(':checked') || $('#template_propagation').is(':checked')) {
 			$('#agg_preview').show();
 		}
 

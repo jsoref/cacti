@@ -175,7 +175,7 @@ CREATE TABLE `aggregate_graph_templates_item` (
 CREATE TABLE `aggregate_graphs` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `aggregate_template_id` int(10) unsigned NOT NULL,
-  `template_propogation` char(2) NOT NULL DEFAULT '',
+  `template_propagation` char(2) NOT NULL DEFAULT '',
   `local_graph_id` int(10) unsigned NOT NULL,
   `title_format` varchar(128) NOT NULL,
   `graph_template_id` int(10) unsigned NOT NULL,

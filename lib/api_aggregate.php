@@ -926,7 +926,7 @@ function push_out_aggregates($aggregate_template_id, $local_graph_id = 0) {
 		);
 
 		$attribs['aggregate_graph_id']   = $aggregate_template_id;
-		$attribs['template_propogation'] = '';
+		$attribs['template_propagation'] = '';
 
 		$template_data                   = db_fetch_row_prepared('SELECT * FROM aggregate_graphs WHERE id = ?', array($id));
 		$attribs['graph_template_id']    = $template_data['graph_template_id'];
@@ -998,7 +998,7 @@ function push_out_aggregates($aggregate_template_id, $local_graph_id = 0) {
 			WHERE id = ?",
 			array($aggregate_template_id));
 
-		$attribs['template_propogation'] = 'on';
+		$attribs['template_propagation'] = 'on';
 		$attribs['graph_template_id']    = $template_data['graph_template_id'];
 		$attribs['gprint_prefix']        = $template_data['gprint_prefix'];
 		$attribs['gprint_format']        = $template_data['gprint_format'];
@@ -1082,7 +1082,7 @@ function aggregate_create_update(&$local_graph_id, $member_graphs, $attribs) {
 		$aggregate_template   = (isset($attribs['aggregate_template_id']) ? $attribs['aggregate_template_id']:0);
 		$graph_template_id    = (isset($attribs['graph_template_id']) ? $attribs['graph_template_id']:0);
 		$aggregate_graph      = (isset($attribs['aggregate_graph_id']) ? $attribs['aggregate_graph_id']:0);
-		$template_propogation = (isset($attribs['template_propogation']) ? $attribs['template_propogation']:'on');
+		$template_propagation = (isset($attribs['template_propagation']) ? $attribs['template_propagation']:'on');
 		$gprint_prefix        = (isset($attribs['gprint_prefix']) ? $attribs['gprint_prefix']:'');
 		$gprint_format        = (isset($attribs['gprint_format']) ? $attribs['gprint_format']:'');
 		$_graph_type          = (isset($attribs['graph_type']) ? $attribs['graph_type']:0);
@@ -1118,7 +1118,7 @@ function aggregate_create_update(&$local_graph_id, $member_graphs, $attribs) {
 		}
 
 		$save1['aggregate_template_id'] = $aggregate_template;
-		$save1['template_propogation']  = $template_propogation;
+		$save1['template_propagation']  = $template_propagation;
 
 		if (isset($graph_title)) {
 			$save1['title_format'] = $graph_title;
@@ -1803,7 +1803,7 @@ function draw_aggregate_graph_items_list($_graph_id = 0, $_graph_template_id = 0
 			if ($is_edit == false) {
 				/* no existing aggregate graph/template */
 				print __('Item # %d', ($i+1));
-			} elseif (isset($_object['template_propogation']) && $_object['template_propogation']) {
+			} elseif (isset($_object['template_propagation']) && $_object['template_propagation']) {
 				/* existing aggregate graph with template propagation enabled */
 				print __('Item # %d', ($i+1));
 			} else {

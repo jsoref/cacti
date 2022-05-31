@@ -136,7 +136,7 @@ function aggregate_form_save() {
 		db_execute_prepared("UPDATE aggregate_graphs
 			SET gprint_prefix = ?, gprint_format = ?, graph_type = ?, total = ?, total_prefix = ?, order_type = ?
 			WHERE aggregate_template_id = ?
-			AND template_propogation='on'",
+			AND template_propagation='on'",
 			array($save1['gprint_prefix'], $save1['gprint_format'], $save1['graph_type'],
 				$save1['total'], $save1['total_prefix'],  $save1['order_type'], $id));
 
@@ -274,7 +274,7 @@ function aggregate_form_actions() {
 				db_execute('DELETE FROM aggregate_graph_templates WHERE ' . array_to_sql_or($selected_items, 'id'));
 				db_execute('DELETE FROM aggregate_graph_templates_item WHERE ' . array_to_sql_or($selected_items, 'aggregate_template_id'));
 				db_execute('DELETE FROM aggregate_graph_templates_graph WHERE ' . array_to_sql_or($selected_items, 'aggregate_template_id'));
-				db_execute("UPDATE aggregate_graphs SET aggregate_template_id=0, template_propogation='' WHERE " . array_to_sql_or($selected_items, 'aggregate_template_id'));
+				db_execute("UPDATE aggregate_graphs SET aggregate_template_id=0, template_propagation='' WHERE " . array_to_sql_or($selected_items, 'aggregate_template_id'));
 			}
 		} else {
 		}

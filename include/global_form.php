@@ -1879,12 +1879,12 @@ $struct_aggregate_graph = array(
 		'value' => '|arg1:title_format|',
 		'size' => '80'
 	),
-	'template_propogation' => array(
+	'template_propagation' => array(
 		'friendly_name' => __('Propagation Enabled'),
 		'description' => __('Is this to carry the template?'),
 		'method' => 'checkbox',
 		'default' => '',
-		'value' => '|arg1:template_propogation|'
+		'value' => '|arg1:template_propagation|'
 	),
 	'spacer1' => array(
 		'friendly_name' => __('Aggregate Graph Settings'),

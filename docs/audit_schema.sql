@@ -126,7 +126,7 @@ INSERT INTO `table_columns` VALUES ('aggregate_graph_templates_item',9,'item_ski
 INSERT INTO `table_columns` VALUES ('aggregate_graph_templates_item',10,'item_total','char(2)','NO','',NULL,'');
 INSERT INTO `table_columns` VALUES ('aggregate_graphs',1,'id','int(10) unsigned','NO','PRI',NULL,'auto_increment');
 INSERT INTO `table_columns` VALUES ('aggregate_graphs',2,'aggregate_template_id','int(10) unsigned','NO','MUL',NULL,'');
-INSERT INTO `table_columns` VALUES ('aggregate_graphs',3,'template_propogation','char(2)','NO','','','');
+INSERT INTO `table_columns` VALUES ('aggregate_graphs',3,'template_propagation','char(2)','NO','','','');
 INSERT INTO `table_columns` VALUES ('aggregate_graphs',4,'local_graph_id','int(10) unsigned','NO','MUL',NULL,'');
 INSERT INTO `table_columns` VALUES ('aggregate_graphs',5,'title_format','varchar(128)','NO','MUL',NULL,'');
 INSERT INTO `table_columns` VALUES ('aggregate_graphs',6,'graph_template_id','int(10) unsigned','NO','',NULL,'');

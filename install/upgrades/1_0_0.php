@@ -786,7 +786,7 @@ function upgrade_to_1_0_0() {
 		$data = array();
 		$data['columns'][] = array('name' => 'id', 'type' => 'int(10)', 'unsigned' => 'unsigned', 'NULL' => false, 'auto_increment' => true);
 		$data['columns'][] = array('name' => 'aggregate_template_id', 'type' => 'int(10)', 'unsigned' => 'unsigned', 'NULL' => false);
-		$data['columns'][] = array('name' => 'template_propogation', 'type' => 'CHAR(2)', 'NULL' => false, 'default' => '');
+		$data['columns'][] = array('name' => 'template_propagation', 'type' => 'CHAR(2)', 'NULL' => false, 'default' => '');
 		$data['columns'][] = array('name' => 'local_graph_id', 'type' => 'int(10)', 'unsigned' => 'unsigned', 'NULL' => false);
 		$data['columns'][] = array('name' => 'title_format', 'type' => 'VARCHAR(128)', 'NULL' => false);
 		$data['columns'][] = array('name' => 'graph_template_id', 'type' => 'int(10)', 'unsigned' => 'unsigned', 'NULL' => false);

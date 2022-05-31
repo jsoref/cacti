@@ -450,7 +450,7 @@ function sync_color_templates($color_template) {
 		FROM aggregate_graphs_graph_item AS agi
 		LEFT JOIN aggregate_graphs AS ag
 		ON ag.id=agi.aggregate_graph_id
-		WHERE (ag.aggregate_template_id > 0 AND ag.template_propogation = "")
+		WHERE (ag.aggregate_template_id > 0 AND ag.template_propagation = "")
 		OR ag.aggregate_template_id = 0
 		AND agi.color_template = ?',
 		array($color_template));
