@@ -228,7 +228,7 @@ function display_help () {
 	print "    [-P|--percent=N] [-N|--number=N] [--absmax=<value>] [-D|--dryrun] [-d|--debug]\n";
 	print "    [--html] [--dsfilter=<filter>]\n\n";
 
-	print "A utility to programatically remove spikes from Cacti graphs. If no optional input parameters\n";
+	print "A utility to programmatically remove spikes from Cacti graphs. If no optional input parameters\n";
 	print "are specified the defaults are taken from the Cacti database.\n\n";
 
 	print "Required:\n";
