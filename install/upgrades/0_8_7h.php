@@ -39,5 +39,5 @@ function upgrade_to_0_8_7h() {
 
 	db_install_add_column('host', array('name' => 'device_threads', 'type' => 'tinyint(2) unsigned', 'NULL' => false, 'default' => '1', 'after' => 'max_oids'));
 
-	db_install_add_key('data_template_rrd', 'unique index',  'duplicate_dsname_contraint', array('local_data_id', 'data_source_name', 'data_template_id'));
+	db_install_add_key('data_template_rrd', 'unique index',  'duplicate_dsname_constraint', array('local_data_id', 'data_source_name', 'data_template_id'));
 }
