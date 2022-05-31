@@ -2458,7 +2458,7 @@ Cacti CHANGELOG
 -bug#0001506: Reindexing fails due to global include issue in lib/snmp.php
 -bug#0001522: Special characters break parsing of template data
 -bug#0001524: Export graphs and Classical Presentation does not honor per graph export rules
--bug#0001528: ICMP Ping availabilty broken in UI for Windows Servers using IIS
+-bug#0001528: ICMP Ping availability broken in UI for Windows Servers using IIS
 -bug#0001535: No display of parent ID in tree nodes for CLI tree add script
 -bug#0001543: All graphs are exported dispite graph export rules
 -bug#0001549: Function array_to_sql_or creates poor sql where clauses
