@@ -1353,7 +1353,7 @@ Cacti CHANGELOG
 -issue#1257: Boost excessively logging updates
 -issue#1258: cacti.sql updated to match expected schema
 -issue#1260: Tab images fail to render due to TrueType support in PHP GD Module
--issue#1261: Automatic logout timeout does not apply to web basic authenication
+-issue#1261: Automatic logout timeout does not apply to web basic authentication
 -issue#1263: CLI utility to validate database schema
 -issue#1266: Inconsistent usage graphWrapper CSS causes odd graph zoom behavior
 -issue#1268: Regex filters not working properly
@@ -1440,7 +1440,7 @@ Cacti CHANGELOG
 -issue#1106: Template Filters has empty row
 -issue#1109: URL used in redirection when referrer already has parameters in it
 -issue#1110: Add CPU Total to 'SNMP - Get Processor Information'
--issue#1111: PHP NOTICE when using LDAP authenication
+-issue#1111: PHP NOTICE when using LDAP authentication
 -issue#1116: Filters not allowing "None" or "All" when editing report item
 -issue#1119: Reduced amount of data fetched for CPU usage to just the data used
 -issue#1121: Bandwidth summation not using correct locale
@@ -2429,7 +2429,7 @@ Cacti CHANGELOG
 -bug#0001486: Unable to login after redirection to access denied page
 -bug#0001516: "Show the page that user pointed their browser" does not seem to work
 -bug#0001561: Over zelous HTML excaping on filter strings
--bug#0001575: LDAP-Authentifications does not work due to ldap_host being set incorrect
+-bug#0001575: LDAP-Authentication does not work due to ldap_host being set incorrect
 -bug#0001587: Feature from bug#0001271 breaks on large values
 -bug#0001607: Web Basic authentication does not work with fastcgi
 -bug#0001620: Max OID's max value reported incorrectly in Web UI
@@ -2678,7 +2678,7 @@ Cacti CHANGELOG
 -feature: Show more colors on a single color's page
 -feature: Exit is either a database or table does not exist
 -feature: Add developer debug level to reduce SQL messages in DEBUG
--feature: Add support for group membership for LDAP authenication
+-feature: Add support for group membership for LDAP authentication
 
 0.8.7b
 -bug#0000855: Unnecessary (and faulty) DEF generation for CF:AVERAGE
@@ -3018,7 +3018,7 @@ Cacti CHANGELOG
 -feature: Enhanced ss_fping.php and ping.php to inclue ICMP, TCP and UDP ping functionality and to specify a port.
 
 0.8.6f
--security: Hardened PHP Project Advisory #042005 - Cacti Authentification/Addslashes Bypass Vulnerability
+-security: Hardened PHP Project Advisory #042005 - Cacti Authentication/Addslashes Bypass Vulnerability
 -security: Hardened PHP Project Advisory #022005 - Cacti Multiple SQL Injection Vulnerabilities
 -security: Hardened PHP Project Advisory #032005 - Cacti Remote Command Execution Vulnerability
 
