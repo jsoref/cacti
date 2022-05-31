@@ -636,7 +636,7 @@ function is_graph_template_allowed($graph_template_id, $user = 0) {
 	return ($total_rows > 0);
 }
 
-/* is_view_allowed - Returns a true or false as to wether or not a specific view type is allowed
+/* is_view_allowed - Returns a true or false as to whether or not a specific view type is allowed
  *                   View options include 'show_tree', 'show_list', 'show_preview', 'graph_settings'
  */
 function is_view_allowed($view = 'show_tree') {
