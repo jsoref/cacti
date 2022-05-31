@@ -2297,7 +2297,7 @@ Cacti CHANGELOG
 -bug#0002167: New poller hook poller_finishing
 -bug#0002172: structure_rra_paths.php does not handle disabled data sources
 -bug#0002174: poller_item.host_id has wrong type
--bug#0002178: typo in include/global_form.php: Mimimum -> Minimum
+-bug#0002178: typo in include/global_form.php: Minimum -> Minimum
 -bug#0002181: session_unregister (use in functions.php) doesn't exist anymore in PHP 5.4
 -bug#0002182: When there is no suitable (unique) index, graphs are not shown in data query ordering on host leafs
 -bug#0002189: Proper graph hooks
