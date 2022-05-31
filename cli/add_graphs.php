@@ -838,7 +838,7 @@ function display_help() {
 	print "                            NOTE: If Data Query is already associated, the reindex method will NOT be changed.\n\n";
 	print "    --snmp-field-exclude=[SNMP Field] | --snmp-value-exclude=[REGEX]";
 	print "				   Optionally used to exclude specific word/s in adding graphs";
-	print "    Valid --reindex-methos include\n";
+	print "    Valid --reindex-method values include\n";
 	print "        0|None   = No reindexing\n";
 	print "        1|Uptime = Uptime goes Backwards (Default)\n";
 	print "        2|Index  = Index Count Changed\n";
