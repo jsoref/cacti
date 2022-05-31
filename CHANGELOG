@@ -237,7 +237,7 @@ Cacti CHANGELOG
 -issue#4125: On completing the installation wizard, an internal server error can sometimes be observed
 -issue#4126: Deleting a damaged graph can sometimes led to removal of valid graphs too
 -issue#4127: When updating Trees, graph titles are calculated too often leading to unresponsiveness
--issue#4130: On large systens, Graph creation can become unresponsive due to large number of data sources
+-issue#4130: On large systems, Graph creation can become unresponsive due to large number of data sources
 -issue#4131: A design flaw makes importing new Graph Template slow on large systems
 -issue#4134: MIB Caching does not always work as expected
 -issue#4135: On large Cacti installs, editing Data Templates is slow
