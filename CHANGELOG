@@ -3343,7 +3343,7 @@ Cacti CHANGELOG
 
 0.8.2a
 -bug: Fixed various problems updating the poller cache.
--bug: Fixed the Weatherbug script to work under Redhat 9.
+-bug: Fixed the Weatherbug script to work under Red Hat 9.
 -cactid: Updated poller to use detached threads based on each host.
 
 0.8.2
@@ -3369,7 +3369,7 @@ Cacti CHANGELOG
 -cactid: Added downed host detection.
 -cactid: Code cleanup: formatting, compiler warnings, and removal of unused functions.
 -cactid: Daemon support has been removed from cactid for the time being, it must be run out of CRON.
--cactid: Have autoconf detect net-snmp before trying ucd-snmp to prevent failure on default Redhat installs.
+-cactid: Have autoconf detect net-snmp before trying ucd-snmp to prevent failure on default Red Hat installs.
 
 0.8.1
 -bug#40: Fixed OIDs in serveral Netware data templates.
