@@ -1796,16 +1796,16 @@ function upgrade_to_1_0_0() {
 	db_install_add_key('data_local', 'INDEX', 'snmp_index', array('snmp_index(191)'));
 	db_install_add_key('graph_local', 'INDEX', 'snmp_index', array('snmp_index(191)'));
 
-	$wathermark_results = db_install_fetch_cell('SELECT name FROM settings WHERE name = "graph_wathermark"', 'name');
-	$wathermark         = $wathermark_results['data'];
+	$watermark_results = db_install_fetch_cell('SELECT name FROM settings WHERE name = "graph_watermark"', 'name');
+	$watermark         = $watermark_results['data'];
 
-	if ($wathermark == 'graph_wathermark') {
-		$wathermark_results = db_install_fetch_cell('SELECT COUNT(*) FROM settings WHERE name = "graph_wathermark"');
-		$wathermark         = $wathermark_results['data'];
-		if ($wathermark == 0) {
-			db_install_execute('UPDATE settings SET name = "graph_watermark" WHERE name = "graph_wathermark"');
+	if ($watermark == 'graph_watermark') {
+		$watermark_results = db_install_fetch_cell('SELECT COUNT(*) FROM settings WHERE name = "graph_watermark"');
+		$watermark         = $watermark_results['data'];
+		if ($watermark == 0) {
+			db_install_execute('UPDATE settings SET name = "graph_watermark" WHERE name = "graph_watermark"');
 		} else {
-			db_install_execute('DELETE FROM settings WHERE name = "graph_wathermark"');
+			db_install_execute('DELETE FROM settings WHERE name = "graph_watermark"');
 		}
 	}
 }
