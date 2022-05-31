@@ -1043,7 +1043,7 @@ Cacti CHANGELOG
 -issue: Removing a Device or Graph Template can not be seen till next login
 -issue: Visual issues with custom data when using paper-plane theme
 -issue: Undefined function errors attempting to sync device templates
--issue: Plugin dependency handling inconsistant
+-issue: Plugin dependency handling inconsistent
 -issue: Editing a report shows incorrect graphs from dropdown
 
 1.2.0
