@@ -2003,7 +2003,7 @@ Cacti CHANGELOG
 -issue: Properly align Order columns.
 -issue: address renaming issues with tree items.
 -issue: Add device snmp --version is ambiguous
--issue: SNMP Availability failed to report down devices - This only was occuring for cmd.php collector.
+-issue: SNMP Availability failed to report down devices - This only was occurring for cmd.php collector.
 -issue: i18n remove embedded HTML syntax
 -issue: Wrap menu items to avoid scrolling
 
