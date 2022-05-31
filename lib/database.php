@@ -501,7 +501,7 @@ function db_fetch_assoc_return($query) {
 	return (is_array($r)) ? $r : array();
 }
 
-/* db_fetch_insert_id - get the last insert_id or auto incriment
+/* db_fetch_insert_id - get the last insert_id or auto increment
    @returns - the id of the last auto increment row that was created */
 function db_fetch_insert_id($db_conn = false) {
 	global $database_sessions, $database_default, $database_hostname, $database_port;
@@ -1407,7 +1407,7 @@ function array_to_sql_or($array, $sql_column) {
    @param $array_items - an array containing each column -> value mapping in the row
    @param $keyCols - a string or array of primary keys
    @param $autoQuote - whether to use intelligent quoting or not
-   @returns - the auto incriment id column (if applicable) */
+   @returns - the auto increment id column (if applicable) */
 function db_replace($table_name, $array_items, $keyCols, $db_conn = false) {
 	global $database_sessions, $database_default, $database_hostname, $database_port;
 
@@ -1483,7 +1483,7 @@ function _db_replace($db_conn, $table, $fieldArray, $keyCols) {
    @param $array_items - an array containing each column -> value mapping in the row
    @param $table_name - the name of the table to make the replacement in
    @param $key_cols - the primary key(s)
-   @returns - the auto incriment id column (if applicable) */
+   @returns - the auto increment id column (if applicable) */
 function sql_save($array_items, $table_name, $key_cols = 'id', $autoinc = true, $db_conn = false) {
 	global $database_sessions, $database_default, $database_hostname, $database_port, $database_last_error;
 
