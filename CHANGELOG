@@ -3483,7 +3483,7 @@ Cacti CHANGELOG
 -bug: Fixed some bugs when creating CDEF's using multiple data sources.
 -bug: Fixed more SNMP parsing bugs with some versions of net-snmp.
 -feature: added an "auto-refresh" feature to the graphs (thanks Nossie).
--bug: HRULE's and VRULE's acually work now.
+-bug: HRULE's and VRULE's actually work now.
 -docs: the beginnings of some real documentation.
 -bug: you can select the color black now.
 
