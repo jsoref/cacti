@@ -1452,7 +1452,7 @@ Cacti CHANGELOG
 -issue#1141: When viewing graphs from list view, pagination causes list view filter to be cleared
 -issue#1143: ss_host_cpu.php - Division by zero / Invalid Return Value
 -issue#1146: Installation now checks URI path matches with configuration option URL_PATH
--issue: Updated Graph pagenation and filter reset
+-issue: Updated Graph pagination and filter reset
 -issue: Resolve issues with cacti_version_compare() processing
 -issue: Zoom context menu stays open after zoom out actions
 -issue: Paginator object was not always translated
@@ -2219,7 +2219,7 @@ Cacti CHANGELOG
 -bug#0002461: invalid bn with ldap and anonymous bind
 -bug#0002465: Graph Export return empty CSV file
 -bug#0002484: Incorrect SQL request in cli script repair_database.php
--bug#0002485: Broken pagenation on graph viewing
+-bug#0002485: Broken pagination on graph viewing
 -bug#0002489: SNMP - Get Mounted Partitions using Re-index method of Index Count Changed causes recache event every time
 -bug#0002490: Can not select page for multiple datasources per device
 -bug#0002494: CSV export always shows last day
