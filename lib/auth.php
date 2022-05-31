@@ -391,7 +391,7 @@ function get_auth_realms($login = false) {
 	);
 }
 
-/* get_graph_permissions_sql - creates SQL that reprents the current graph, host and graph
+/* get_graph_permissions_sql - creates SQL that represents the current graph, host and graph
      template policies
    @arg $policy_graphs - (int) the current graph policy
    @arg $policy_hosts - (int) the current host policy
