@@ -1457,7 +1457,7 @@ class spikekill {
 	     that exist inside the RRD.  This produces an array of relevant matches
 	     for this particular spikekill execution
 	   @arg $filters - an array containing individual filters
-	   @returns - an array represeting the DSes in this RRD file, or false if
+	   @returns - an array representing the DSes in this RRD file, or false if
 	     the filters had no matches */
 	private function evaluateDsFilter($filters) {
 		$ds_heap = array();
