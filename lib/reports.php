@@ -969,7 +969,7 @@ function reports_expand_tree(&$report, $item, $parent, $output, $format_ok, $the
 		foreach ($leaves as $leaf) {
 			$sql_where       = '';
 			$title           = '';
-			$title_delimeter = '';
+			$title_delimiter = '';
 			$search_key      = '';
 			$host_name       = '';
 			$graph_name      = '';
@@ -1020,23 +1020,23 @@ function reports_expand_tree(&$report, $item, $parent, $output, $format_ok, $the
 			}
 
 			if (!empty($tree_name) && empty($leaf_name) && empty($host_name)) {
-				$title = $title_delimeter . '<strong>' . __('Tree:') . "</strong> $tree_name";
-				$title_delimeter = '-> ';
+				$title = $title_delimiter . '<strong>' . __('Tree:') . "</strong> $tree_name";
+				$title_delimiter = '-> ';
 			}
 
 			if (!empty($leaf_name)) {
-				$title .= $title_delimeter . '<strong>' . __('Leaf:') . "</strong> $leaf_name";
-				$title_delimeter = '-> ';
+				$title .= $title_delimiter . '<strong>' . __('Leaf:') . "</strong> $leaf_name";
+				$title_delimiter = '-> ';
 			}
 
 			if (!empty($host_name)) {
-				$title .= $title_delimeter . '<strong>' . __('Host:') . "</strong> $host_name";
-				$title_delimeter = '-> ';
+				$title .= $title_delimiter . '<strong>' . __('Host:') . "</strong> $host_name";
+				$title_delimiter = '-> ';
 			}
 
 			if (!empty($graph_name) && !$nested) {
-				$title .= $title_delimeter . '<strong>' . __('Graph:') . "</strong> $graph_name";
-				$title_delimeter = '-> ';
+				$title .= $title_delimiter . '<strong>' . __('Graph:') . "</strong> $graph_name";
+				$title_delimiter = '-> ';
 			}
 
 			if ($item['graph_name_regexp'] != '') {
