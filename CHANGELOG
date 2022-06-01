@@ -2775,7 +2775,7 @@ Cacti CHANGELOG
 -bug#0000946: Timetick of zero returns down for device
 -bug#0000947: Trailing blank on OID in form causes problems
 -bug#0000953: SNMP Passphrase is displayed in cleartext
--bug#0000954: Y-grid lables are not informative when using --alt-autoscale
+-bug#0000954: Y-grid labels are not informative when using --alt-autoscale
 -bug#0000955: Fixed possible denial of service attack by modifying graph image URL
 -bug#0000956: Additional editing help with tree management
 -bug#0000957: Script server output's beginning/trailing data during "Include" causing a synchronization issue
