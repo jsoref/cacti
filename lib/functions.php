@@ -6516,7 +6516,7 @@ function get_running_user(): string {
 			}
 		}
 
-		// Falback method
+		// Fallback method
 		if (empty($tmp_user)) {
 			$user = getenv('USERNAME');
 			if ($user != '') {

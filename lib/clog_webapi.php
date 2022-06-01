@@ -954,12 +954,12 @@ function clog_regex_dataquery($matches, $link = false) {
 		}
 
 		if (cacti_sizeof($wanted_ids)) {
-			$querys = db_fetch_assoc('SELECT id, name
+			$queries = db_fetch_assoc('SELECT id, name
 				FROM snmp_query
 				WHERE id in (' . implode(',',$wanted_ids) . ')');
 
-			if (cacti_sizeof($querys)) {
-				foreach ($querys as $query) {
+			if (cacti_sizeof($queries)) {
+				foreach ($queries as $query) {
 					$cache[$query['id']] = html_escape($query['name']);
 				}
 			}
@@ -1028,7 +1028,7 @@ function clog_regex_graphs($matches, $link = false) {
 		}
 
 		if (cacti_sizeof($wanted_ids)) {
-			$querys = db_fetch_assoc('SELECT DISTINCT
+			$queries = db_fetch_assoc('SELECT DISTINCT
 				gtg.local_graph_id AS id,
 				gtg.title_cache AS title
 				FROM graph_templates_graph AS gtg
@@ -1038,8 +1038,8 @@ function clog_regex_graphs($matches, $link = false) {
 				ON gti.task_item_id=dtr.id
 				WHERE gtg.local_graph_id in (' . implode(',',$wanted_ids) . ')');
 
-			if (cacti_sizeof($querys)) {
-				foreach ($querys as $query) {
+			if (cacti_sizeof($queries)) {
+				foreach ($queries as $query) {
 					$cache[$query['id']] = html_escape($query['title']);
 				}
 			}
@@ -1086,12 +1086,12 @@ function clog_regex_graphtemplates($matches, $link = false) {
 		}
 
 		if (cacti_sizeof($wanted_ids)) {
-			$querys = db_fetch_assoc('SELECT id, name
+			$queries = db_fetch_assoc('SELECT id, name
 				FROM graph_templates
 				WHERE id in ('  . implode(',',$wanted_ids) . ')');
 
-			if (cacti_sizeof($querys)) {
-				foreach ($querys as $query) {
+			if (cacti_sizeof($queries)) {
+				foreach ($queries as $query) {
 					$cache[$query['id']] = html_escape($query['name']);
 				}
 			}
@@ -1136,13 +1136,13 @@ function clog_regex_users($matches, $link = false) {
 		}
 
 		if (cacti_sizeof($wanted_ids)) {
-			$querys = db_fetch_assoc('SELECT DISTINCT
+			$queries = db_fetch_assoc('SELECT DISTINCT
 				id, username
 				FROM user_auth
 				WHERE id in (' . implode(',',$wanted_ids) . ')');
 
-			if (cacti_sizeof($querys)) {
-				foreach ($querys as $query) {
+			if (cacti_sizeof($queries)) {
+				foreach ($queries as $query) {
 					$cache[$query['id']] = html_escape($query['username']);
 				}
 			}

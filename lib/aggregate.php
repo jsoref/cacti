@@ -65,7 +65,7 @@ function api_aggregate_convert_template($graphs) {
 		$save['id']                    = '';
 		$save['local_graph_id']        = $graph;
 		$save['aggregate_template_id'] = $aggregate_template_id;
-		$save['template_propogation']  = 'on';
+		$save['template_propagation']  = 'on';
 		$save['title_format']          = db_fetch_cell_prepared('SELECT title_cache FROM graph_templates_graph WHERE local_graph_id = ?', array($graph));
 		$save['graph_template_id']     = $aggregate_template['graph_template_id'];
 		$save['gprint_prefix']         = $aggregate_template['gprint_prefix'];
@@ -188,7 +188,7 @@ function api_aggregate_create($aggregate_name, $graphs, $agg_template_id = 0) {
 		unset($agg_template['name']);
 
 		$agg_template['aggregate_template_id'] = $agg_template_id;
-		$agg_template['template_propogation']  = 'on';
+		$agg_template['template_propagation']  = 'on';
 
 		/* get graph items */
 		foreach($graphs as $graph) {
@@ -791,13 +791,13 @@ function auto_title($_local_graph_id) {
 
 	cacti_log('title:' . $graph_title, true, 'AGGREGATE', POLLER_VERBOSITY_DEBUG);
 
-	# remove all '- |query_*|' occurences
+	# remove all '- |query_*|' occurrences
 	$pattern = '/-?\s+\|query_\w+\|/';
 	$graph_title = preg_replace($pattern, '', $graph_title);
 
 	cacti_log('title:' . $graph_title, true, 'AGGREGATE', POLLER_VERBOSITY_DEBUG);
 
-	# remove all '- |host_*|' occurences
+	# remove all '- |host_*|' occurrences
 	$pattern = '/-?\s+\|host_\w+\|/';
 	$graph_title = preg_replace($pattern, '', $graph_title);
 

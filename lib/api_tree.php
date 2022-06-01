@@ -125,7 +125,7 @@ function api_tree_lock($tree_ids, $user_id = 0) {
 	}
 }
 
-/* api_tree_unlock - unlockes a locked tree or trees that have been locked for editing
+/* api_tree_unlock - unlocks a locked tree or trees that have been locked for editing
  * @arg $tree_ids - the tree id or ids
  * @arg $user_id - the user id
  * @returns - true or false */
@@ -314,7 +314,7 @@ function api_tree_copy_node($tree_id, $node_id, $new_parent, $new_position) {
 	print json_encode(array('id' => 'tbranch:' . $id));
 }
 
-/* api_tree_get_lock - given a lock name, placed a timeed lock on the database.
+/* api_tree_get_lock - given a lock name, placed a timed lock on the database.
  * This function allows simulating transactions in an MyISAM database.
  * @arg $lockname - The name of the lock to be created
  * @returns - true depending on outcome */
@@ -342,10 +342,10 @@ function api_tree_release_lock($lockname) {
 	$unlocked = db_fetch_cell("SELECT RELEASE_LOCK('$lockname')");
 }
 
-/* api_tree_create_node - given a tree, a desintation leaf_id, order position, and title, create a branch/leaf.
+/* api_tree_create_node - given a tree, a destination leaf_id, order position, and title, create a branch/leaf.
  * @arg $tree_id - The tree to remove from
  * @arg $node_id - The branch/leaf to place the new branch/leaf
- * @arg $title - The new brnach/leaf title
+ * @arg $title - The new branch/leaf title
  * @returns - json encoded new leaf information */
 function api_tree_create_node($tree_id, $node_id, $position, $title = '') {
 	input_validate_input_number($tree_id);
@@ -770,27 +770,27 @@ function api_tree_get_main($tree_id, $parent = 0) {
 
 			print "<ul><li class='jstree-closed' id='tree_anchor-$tree_id' data-jstree='{ \"type\" : \"tree\" }'><a href='" . html_escape('graph_view.php?action=tree&node=tree_anchor-' . $tree_id). "'>" . html_escape($name) . "</a>\n";
 
-			$heirarchy = draw_dhtml_tree_level_graphing($tree_id, $parent);
+			$hierarchy = draw_dhtml_tree_level_graphing($tree_id, $parent);
 
-			if (cacti_sizeof($heirarchy)) {
-				foreach($heirarchy as $h) {
+			if (cacti_sizeof($hierarchy)) {
+				foreach($hierarchy as $h) {
 					print $h;
 				}
 			}
 		} else {
-			$heirarchy = draw_dhtml_tree_level_graphing($tree_id, $parent);
+			$hierarchy = draw_dhtml_tree_level_graphing($tree_id, $parent);
 
-			if (cacti_sizeof($heirarchy)) {
-				foreach($heirarchy as $h) {
+			if (cacti_sizeof($hierarchy)) {
+				foreach($hierarchy as $h) {
 					print $h;
 				}
 			}
 		}
 	} else {
-		$heirarchy = draw_dhtml_tree_level_graphing($tree_id, $parent);
+		$hierarchy = draw_dhtml_tree_level_graphing($tree_id, $parent);
 
-		if (cacti_sizeof($heirarchy)) {
-			foreach($heirarchy as $h) {
+		if (cacti_sizeof($hierarchy)) {
+			foreach($hierarchy as $h) {
 				print $h;
 			}
 		}
@@ -808,18 +808,18 @@ function api_tree_get_main($tree_id, $parent = 0) {
  * @returns - string of the tree items in html format */
 function api_tree_get_node($tree_id, $node_id, $editing = false) {
 	if ($node_id == '#') {
-		$heirarchy = draw_dhtml_tree_level($tree_id, 0, $editing);
+		$hierarchy = draw_dhtml_tree_level($tree_id, 0, $editing);
 	} else {
 		$data  = api_tree_parse_node_data($node_id);
 		$id    = $data['leaf_id'];
 
 		input_validate_input_number($id);
-		$heirarchy = draw_dhtml_tree_level($tree_id, $id, $editing);
+		$hierarchy = draw_dhtml_tree_level($tree_id, $id, $editing);
 	}
 
-	if (cacti_sizeof($heirarchy)) {
+	if (cacti_sizeof($hierarchy)) {
 		$hh = '';
-		foreach($heirarchy as $h) {
+		foreach($hierarchy as $h) {
 			$hh .= $h;
 		}
 
@@ -832,13 +832,13 @@ function api_tree_get_node($tree_id, $node_id, $editing = false) {
  * @arg $tree_id - the tree id for the object
  * @arg $type - the item type graph, host, leaf
  * @arg $parent_tree_item_id - The parent leaf for the object
- * @arg $title - The leaf title in the caseo a leaf
+ * @arg $title - The leaf title in the case of a leaf
  * @arg $local_graph_id - The graph id in the case of a graph
  * @arg $host_id - The host id in the case of a graph
  * @arg $site_id - The site id in the case of a graph
  * @arg $host_grouping_type - The sort order for the host under expanded hosts
  * @arg $sort_children_type - The sort type in the case of a leaf
- * @arg $propagate_changes - Wether the changes should be cascaded through all children
+ * @arg $propagate_changes - Whether the changes should be cascaded through all children
  * @returns - boolean true or false depending on the outcome of the operation */
 function api_tree_item_save($id, $tree_id, $type, $parent_tree_item_id, $title, $local_graph_id,
 	$host_id, $site_id, $host_grouping_type, $sort_children_type, $propagate_changes) {
@@ -914,7 +914,7 @@ function api_tree_item_save($id, $tree_id, $type, $parent_tree_item_id, $title, 
 
 /* api_tree_get_item_type - gets the type of tree item
    @arg $tree_item_id - the id of the tree item to fetch the type for
-   @returns - a string reprenting the type of the tree item. valid return
+   @returns - a string representing the type of the tree item. valid return
      values are 'header', 'graph', and 'host' */
 function api_tree_get_item_type($tree_item_id) {
 	$tree_item = db_fetch_row_prepared('SELECT title, local_graph_id, site_id, host_id
@@ -1269,7 +1269,7 @@ function api_tree_check_sequences() {
 		) AS t
 		WHERE t.count > 1');
 
-	// report any bad or duplicate sequencs to the log for reporting purposes
+	// report any bad or duplicate sequences to the log for reporting purposes
 	if ($bad_seq > 0) {
 		cacti_log('WARN: Found ' . $bad_seq . ' Sequences in graph_tree Table', false, 'TREE', POLLER_VERBOSITY_HIGH);
 	}
@@ -1562,7 +1562,7 @@ function api_tree_set_branch_sort_type($nodetype, $nodeid) {
 	}
 }
 
-/* api_tree_sort_recursive - sort a tree branch and its siblines recursively
+/* api_tree_sort_recursive - sort a tree branch and its siblings recursively
  * This function given a branch id within a tree and a tree id, will sort it recursively
  * @returns - null */
 function api_tree_sort_recursive($branch, $tree_id) {

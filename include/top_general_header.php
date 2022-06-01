@@ -22,5 +22,5 @@
  +-------------------------------------------------------------------------+
 */
 
-cacti_depricated('top_general_header()');
+cacti_deprecated('top_general_header()');
 include(__DIR__ .'/top_header.php');

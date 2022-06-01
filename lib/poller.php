@@ -35,7 +35,7 @@ function exec_poll($command) {
 			$fp = popen($command, 'rb');
 		}
 
-		/* return if the popen command was not successfull */
+		/* return if the popen command was not successful */
 		if (!is_resource($fp)) {
 			cacti_log('WARNING; Problem with POPEN command.', false, 'POLLER');
 			return 'U';
@@ -95,7 +95,7 @@ function exec_poll_php($command, $using_proc_function, $pipes, $proc_fd) {
 				$fp = popen($command, 'rb');
 			}
 
-			/* return if the popen command was not successfull */
+			/* return if the popen command was not successful */
 			if (!is_resource($fp)) {
 				cacti_log('WARNING; Problem with POPEN command.', false, 'POLLER');
 				return 'U';
@@ -353,7 +353,7 @@ function poller_update_poller_reindex_from_buffer($host_id, $data_query_id, &$re
 	/* use a reasonable insert buffer, the default is 1MByte */
 	$max_packet   = 256000;
 
-	/* setup somme defaults */
+	/* setup some defaults */
 	$overhead     = strlen($sql_prefix) + strlen($sql_suffix);
 	$buf_len      = 0;
 	$buf_count    = 0;
@@ -1646,7 +1646,7 @@ function poller_push_reindex_data_to_poller($device_id = 0, $data_query_id = 0, 
 		$sql_where1 .= ' AND snmp_query_id = ' . $data_query_id;
 	}
 
-	// Give the snmp query upto an hour to run
+	// Give the snmp query up to an hour to run
 	$min_reindex_cache = db_fetch_cell("SELECT MIN(UNIX_TIMESTAMP(last_updated)-3600)
 		FROM host_snmp_cache
 		$sql_where");

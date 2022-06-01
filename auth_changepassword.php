@@ -232,7 +232,7 @@ case 'changepassword':
 
 		raise_message('password_success');
 
-		/* ok, at the point the user has been sucessfully authenticated; so we must decide what to do next */
+		/* ok, at the point the user has been successfully authenticated; so we must decide what to do next */
 
 		/* if no console permissions show graphs otherwise, pay attention to user setting */
 		$realm_id    = $user_auth_realm_filenames['index.php'];
@@ -371,7 +371,7 @@ html_auth_footer('change_password', $errorMessage, "
 
 			var data = {
 				password: $('#password').val(),
-				password_confim: $('#password_confirm').val(),
+				password_confirm: $('#password_confirm').val(),
 				__csrf_magic: csrfMagicToken
 			}
 

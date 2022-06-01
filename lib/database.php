@@ -501,7 +501,7 @@ function db_fetch_assoc_return($query) {
 	return (is_array($r)) ? $r : array();
 }
 
-/* db_fetch_insert_id - get the last insert_id or auto incriment
+/* db_fetch_insert_id - get the last insert_id or auto increment
    @returns - the id of the last auto increment row that was created */
 function db_fetch_insert_id($db_conn = false) {
 	global $database_sessions, $database_default, $database_hostname, $database_port;
@@ -884,8 +884,8 @@ function db_cacti_initialized($is_web = true) {
 		print ($is_web ? '<table style="height:40px;"><tr><td></td></tr></table>':'');
 		print ($is_web ? '<table style="margin-left:auto;margin-right:auto;width:80%;border:1px solid rgba(98,125,77,1)" class="cactiTable"><tr class="cactiTableTitle"><td style="color:snow;font-weight:bold;">Fatal Error - Cacti Database Not Initialized</td></tr>':'');
 		print ($is_web ? '<tr class="installArea"><td>':'');
-		print ($is_web ? '<p>':'') . 'The Cacti Database has not been initialized.  Please initilize it before continuing.' . ($is_web ? '</p>':"\n");
-		print ($is_web ? '<p>':'') . 'To initilize the Cacti database, issue the following commands either as root or using a valid account.' . ($is_web ? '</p>':"\n");
+		print ($is_web ? '<p>':'') . 'The Cacti Database has not been initialized.  Please initialize it before continuing.' . ($is_web ? '</p>':"\n");
+		print ($is_web ? '<p>':'') . 'To initialize the Cacti database, issue the following commands either as root or using a valid account.' . ($is_web ? '</p>':"\n");
 		print ($is_web ? '<p style="font-weight:bold;padding-left:25px;">':'') . '  mysqladmin -uroot -p create cacti' . ($is_web ? '</p>':"\n");
 		print ($is_web ? '<p style="font-weight:bold;padding-left:25px;">':'') . '  mysql -uroot -p -e "grant all on cacti.* to \'someuser\'@\'localhost\' identified by \'somepassword\'"' . ($is_web ? '</p>':"\n");
 		print ($is_web ? '<p style="font-weight:bold;padding-left:25px;">':'') . '  mysql -uroot -p -e "grant select on mysql.time_zone_name to \'someuser\'@\'localhost\' identified by \'somepassword\'"' . ($is_web ? '</p>':"\n");
@@ -1382,7 +1382,7 @@ function db_rollback_transaction($db_conn = false) {
 	return $db_conn->rollBack();
 }
 
-/* array_to_sql_or - loops through a single dimentional array and converts each
+/* array_to_sql_or - loops through a single dimensional array and converts each
      item to a string that can be used in the OR portion of an sql query in the
      following form:
         column=item1 OR column=item2 OR column=item2 ...
@@ -1407,7 +1407,7 @@ function array_to_sql_or($array, $sql_column) {
    @param $array_items - an array containing each column -> value mapping in the row
    @param $keyCols - a string or array of primary keys
    @param $autoQuote - whether to use intelligent quoting or not
-   @returns - the auto incriment id column (if applicable) */
+   @returns - the auto increment id column (if applicable) */
 function db_replace($table_name, $array_items, $keyCols, $db_conn = false) {
 	global $database_sessions, $database_default, $database_hostname, $database_port;
 
@@ -1483,7 +1483,7 @@ function _db_replace($db_conn, $table, $fieldArray, $keyCols) {
    @param $array_items - an array containing each column -> value mapping in the row
    @param $table_name - the name of the table to make the replacement in
    @param $key_cols - the primary key(s)
-   @returns - the auto incriment id column (if applicable) */
+   @returns - the auto increment id column (if applicable) */
 function sql_save($array_items, $table_name, $key_cols = 'id', $autoinc = true, $db_conn = false) {
 	global $database_sessions, $database_default, $database_hostname, $database_port, $database_last_error;
 

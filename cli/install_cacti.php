@@ -118,10 +118,10 @@ if (cacti_sizeof($parms)) {
 			case '--install':
 				$should_install = true;
 				break;
-			case '--language':
+			case '--langauge':
 			case '--lang':
 			case '-l':
-				set_install_option($options, 'Language', 'Language', $value);
+				set_install_option($options, 'Langauge', 'Langauge', $value);
 				break;
 			case '--mode':
 			case '-m':
@@ -268,7 +268,7 @@ function set_install_option(&$options, $key, $display_name, $value) {
 	log_install_high('cli',sprintf('Setting %s to \'%s\'', $display_name, $value));
 }
 
-/*  set_install_multioption - sets sub-options that have mutiple key/value combinations with optional prefix */
+/*  set_install_multioption - sets sub-options that have multiple key/value combinations with optional prefix */
 function set_install_multioption(&$options, $key, $display_name, $value, $prefix, $replace_dots = false) {
 	$option_pos = strpos($value, ':');
 	if ($option_pos !== false) {
@@ -338,7 +338,7 @@ function display_version() {
 function display_help () {
 	print PHP_EOL . 'usage: install_cacti.php [--debug] --accept-eula ' . PHP_EOL;
 	print '                         [--automationmode=] [--automationrange=] [--cron=]' . PHP_EOL;
-	print '                         [--language=] [--mode=] [--profile=] [--path=]' . PHP_EOL;
+	print '                         [--langauge=] [--mode=] [--profile=] [--path=]' . PHP_EOL;
 	print '                         [--rrdtool=] [--snmp=] [--table=] [--template=]' . PHP_EOL;
 	print '                         [--theme=]' . PHP_EOL;
 	print PHP_EOL . 'A utility to install/upgrade Cacti to the currently sourced version' . PHP_EOL;
@@ -354,14 +354,14 @@ function display_help () {
 	print '  -am | --automationmode  - Enable/Disable automatic network discovery' . PHP_EOL;
 	print '  -ar | --automationrange - Set automatic network discovery subnet' . PHP_EOL;
 	print '  -c  | --cron            - Set the cron interval' . PHP_EOL;
-	print '  -l  | --lang[uage]      - Set system language' . PHP_EOL;
+	print '  -l  | --lang[uage]      - Set system langauge' . PHP_EOL;
 	print '  -m  | --mode            - Set the installation mode' . PHP_EOL;
 	print '  -p  | --profile         - Set the default Data Collector profile' . PHP_EOL;
 	print '  -r  | --rrdtool         - Set the RRD Tool version' . PHP_EOL;
 	print '  -t  | --theme           - Set system theme' . PHP_EOL;
 	print '  -i  | --ini             - Load settings from ini file' . PHP_EOL;
 	print '  -j  | --json            - Load settings from json file' . PHP_EOL;
-	print PHP_EOL . 'Mutli-value optional:' . PHP_EOL;
+	print PHP_EOL . 'Multi-value optional:' . PHP_EOL;
 	print '  These options may be used more than once to apply multiple values.  All' . PHP_EOL;
 	print '  values should be in "option_key:option_value" format (see below). If an' . PHP_EOL;
 	print '  option has a prefix, this is optional and is automatically added to the' . PHP_EOL;

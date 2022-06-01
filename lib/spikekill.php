@@ -53,7 +53,7 @@ class spikekill {
 	var $dsfilter  = ''; /* starts as string, changed into array */
 	var $absmax    = '';
 
-	// Overrideable
+	// Overridable
 	var $html      = true;
 	var $backup    = false;
 	var $debug     = false;
@@ -292,7 +292,7 @@ class spikekill {
 			}
 
 			if (!is_numeric($this->outliers) || ($this->outliers < 1)) {
-				$this->set_error("FATAL: The number of outliers to exlude must be a positive integer.");
+				$this->set_error("FATAL: The number of outliers to exclude must be a positive integer.");
 			}
 
 			$this->out_set = true;
@@ -1457,7 +1457,7 @@ class spikekill {
 	     that exist inside the RRD.  This produces an array of relevant matches
 	     for this particular spikekill execution
 	   @arg $filters - an array containing individual filters
-	   @returns - an array represeting the DSes in this RRD file, or false if
+	   @returns - an array representing the DSes in this RRD file, or false if
 	     the filters had no matches */
 	private function evaluateDsFilter($filters) {
 		$ds_heap = array();

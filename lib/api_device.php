@@ -790,7 +790,7 @@ function api_device_save($id, $host_template_id, $description, $hostname, $snmp_
 
 			api_device_cache_crc_update($save['poller_id']);
 
-			/* push out relavant fields to data sources using this host */
+			/* push out relevant fields to data sources using this host */
 			if (!$quick_save) {
 				push_out_host($host_id, 0);
 			}
@@ -1010,7 +1010,7 @@ function api_device_update_host_template(int $host_id, int $host_template_id) {
 }
 
 /* api_device_template_sync_template - updates the device template mapping for all devices mapped to a template
-   @arg $device_template - the device template to syncronize
+   @arg $device_template - the device template to synchronize
    @arg $host_ids - an array of host_ids or a string with a single host_id
    @arg $down_devices - also update mapping of down devices */
 function api_device_template_sync_template($device_template, $host_ids = '', $down_devices = false) {

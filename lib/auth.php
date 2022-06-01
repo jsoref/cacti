@@ -391,7 +391,7 @@ function get_auth_realms($login = false) {
 	);
 }
 
-/* get_graph_permissions_sql - creates SQL that reprents the current graph, host and graph
+/* get_graph_permissions_sql - creates SQL that represents the current graph, host and graph
      template policies
    @arg $policy_graphs - (int) the current graph policy
    @arg $policy_hosts - (int) the current host policy
@@ -636,7 +636,7 @@ function is_graph_template_allowed($graph_template_id, $user = 0) {
 	return ($total_rows > 0);
 }
 
-/* is_view_allowed - Returns a true or false as to wether or not a specific view type is allowed
+/* is_view_allowed - Returns a true or false as to whether or not a specific view type is allowed
  *                   View options include 'show_tree', 'show_list', 'show_preview', 'graph_settings'
  */
 function is_view_allowed($view = 'show_tree') {
@@ -914,7 +914,7 @@ function get_allowed_tree_content($tree_id, $parent = 0, $sql_where = '', $order
 			$sql_where .= ' AND gt.id IN (' . implode(', ', array_keys($trees)) . ')';
 		}
 
-		$heirarchy = db_fetch_assoc("SELECT gti.graph_tree_id AS tree_id, gti.id, gti.title, gti.host_id, gti.site_id,
+		$hierarchy = db_fetch_assoc("SELECT gti.graph_tree_id AS tree_id, gti.id, gti.title, gti.host_id, gti.site_id,
 			gti.local_graph_id, gti.host_grouping_type, h.description AS hostname, s.name AS sitename
 			FROM graph_tree_items AS gti
 			INNER JOIN graph_tree AS gt
@@ -926,7 +926,7 @@ function get_allowed_tree_content($tree_id, $parent = 0, $sql_where = '', $order
 			$sql_where
 			ORDER BY gti.position");
 	} elseif (cacti_sizeof($trees)) {
-		$heirarchy = db_fetch_assoc("SELECT gt.id AS tree_id, '0' AS id, gt.name AS title, '0' AS host_id, '0' AS site_id,
+		$hierarchy = db_fetch_assoc("SELECT gt.id AS tree_id, '0' AS id, gt.name AS title, '0' AS host_id, '0' AS site_id,
 			'0' AS local_graph_id, '1' AS host_grouping_type, '' AS hostname, '' AS sitename
 			FROM graph_tree AS gt
 			WHERE enabled='on'
@@ -935,30 +935,30 @@ function get_allowed_tree_content($tree_id, $parent = 0, $sql_where = '', $order
 	}
 
 	if (read_config_option('auth_method') != 0) {
-		$new_heirarchy = array();
-		if (cacti_sizeof($heirarchy)) {
-			foreach($heirarchy as $h) {
+		$new_hierarchy = array();
+		if (cacti_sizeof($hierarchy)) {
+			foreach($hierarchy as $h) {
 				if ($h['host_id'] > 0) {
 					if (is_device_allowed($h['host_id'])) {
-						$new_heirarchy[] = $h;
+						$new_hierarchy[] = $h;
 					}
 				} elseif ($h['id'] == 0) {
 					if (!is_tree_branch_empty($h['tree_id'], $h['id'])) {
 						if (is_tree_allowed($h['tree_id'])) {
-							$new_heirarchy[] = $h;
+							$new_hierarchy[] = $h;
 						}
 					}
 				} elseif ($h['site_id'] > 0) {
-					$new_heirarchy[] = $h;
+					$new_hierarchy[] = $h;
 				} elseif (!is_tree_branch_empty($h['tree_id'], $h['id'])) {
-					$new_heirarchy[] = $h;
+					$new_hierarchy[] = $h;
 				}
 			}
 		}
 
-		return $new_heirarchy;
+		return $new_hierarchy;
 	} else {
-		return $heirarchy;
+		return $hierarchy;
 	}
 }
 
@@ -3168,7 +3168,7 @@ function auth_post_login_redirect($user) {
 		$newtheme = true;
 	}
 
-	/* ok, at the point the user has been sucessfully authenticated; so we must
+	/* ok, at the point the user has been successfully authenticated; so we must
 	decide what to do next */
 	switch ($user['login_opts']) {
 		case '1': /* referer */

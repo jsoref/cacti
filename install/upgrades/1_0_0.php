@@ -265,7 +265,7 @@ function upgrade_to_1_0_0() {
 		KEY `name` (`name`))
 		ENGINE=$engine
 		ROW_FORMAT=Dynamic
-		COMMENT='Notifcations and related attributes';");
+		COMMENT='Notifications and related attributes';");
 
 	if (db_table_exists('plugin_snmpagent_cache_textual_conventions', false)) {
 		db_install_rename_table('plugin_snmpagent_cache_textual_conventions', 'snmpagent_cache_textual_conventions');
@@ -505,7 +505,7 @@ function upgrade_to_1_0_0() {
 
 						$pos_array[$parent_id] = $position;
 
-						$postion = $position_result['data'] + 1;
+						$position = $position_result['data'] + 1;
 
 						db_install_execute('UPDATE graph_tree_items
 							SET parent = ?, position = ?
@@ -599,7 +599,7 @@ function upgrade_to_1_0_0() {
 			KEY `mailtime` (`mailtime`))
 			ENGINE=$engine
 			ROW_FORMAT=Dynamic
-			COMMENT='Cacri Reporting Reports'");
+			COMMENT='Cacti Reporting Reports'");
 
 		db_install_execute("CREATE TABLE IF NOT EXISTS `reports_items` (
 			`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -786,7 +786,7 @@ function upgrade_to_1_0_0() {
 		$data = array();
 		$data['columns'][] = array('name' => 'id', 'type' => 'int(10)', 'unsigned' => 'unsigned', 'NULL' => false, 'auto_increment' => true);
 		$data['columns'][] = array('name' => 'aggregate_template_id', 'type' => 'int(10)', 'unsigned' => 'unsigned', 'NULL' => false);
-		$data['columns'][] = array('name' => 'template_propogation', 'type' => 'CHAR(2)', 'NULL' => false, 'default' => '');
+		$data['columns'][] = array('name' => 'template_propagation', 'type' => 'CHAR(2)', 'NULL' => false, 'default' => '');
 		$data['columns'][] = array('name' => 'local_graph_id', 'type' => 'int(10)', 'unsigned' => 'unsigned', 'NULL' => false);
 		$data['columns'][] = array('name' => 'title_format', 'type' => 'VARCHAR(128)', 'NULL' => false);
 		$data['columns'][] = array('name' => 'graph_template_id', 'type' => 'int(10)', 'unsigned' => 'unsigned', 'NULL' => false);
@@ -830,10 +830,10 @@ function upgrade_to_1_0_0() {
 		$data['keys'][]    = '';
 		$data['type']      = $engine;
 		$data['row_format'] = 'Dynamic';
-		$data['comment']   = 'Aggregate Graph Graph Items';
+		$data['comment']   = 'Aggregate Graph Items';
 		db_table_create ('plugin_aggregate_graphs_graph_item', $data);
 
-		/* TODO should this go in a seperate upgrade function? */
+		/* TODO should this go in a separate upgrade function? */
 		/* Create table holding aggregate template graph params */
 		$data = array();
 		$data['columns'][] = array('name' => 'aggregate_template_id', 'type' => 'int(10)', 'unsigned' => 'unsigned', 'NULL' => false);
@@ -878,7 +878,7 @@ function upgrade_to_1_0_0() {
 		$data['comment']   = 'Aggregate Template Graph Data';
 		db_table_create ('plugin_aggregate_graph_templates_graph', $data);
 
-		/* TODO should this go in a seperate upgrade function? */
+		/* TODO should this go in a separate upgrade function? */
 		/* Add cfed and graph_type override columns to aggregate tables */
 		$columns = array();
 		$columns[] = array('name' => 't_graph_type_id', 'type' => 'char(2)', 'default' => '', 'after' => 'color_template');
@@ -1796,16 +1796,16 @@ function upgrade_to_1_0_0() {
 	db_install_add_key('data_local', 'INDEX', 'snmp_index', array('snmp_index(191)'));
 	db_install_add_key('graph_local', 'INDEX', 'snmp_index', array('snmp_index(191)'));
 
-	$wathermark_results = db_install_fetch_cell('SELECT name FROM settings WHERE name = "graph_wathermark"', 'name');
-	$wathermark         = $wathermark_results['data'];
+	$watermark_results = db_install_fetch_cell('SELECT name FROM settings WHERE name = "graph_watermark"', 'name');
+	$watermark         = $watermark_results['data'];
 
-	if ($wathermark == 'graph_wathermark') {
-		$wathermark_results = db_install_fetch_cell('SELECT COUNT(*) FROM settings WHERE name = "graph_wathermark"');
-		$wathermark         = $wathermark_results['data'];
-		if ($wathermark == 0) {
-			db_install_execute('UPDATE settings SET name = "graph_watermark" WHERE name = "graph_wathermark"');
+	if ($watermark == 'graph_watermark') {
+		$watermark_results = db_install_fetch_cell('SELECT COUNT(*) FROM settings WHERE name = "graph_watermark"');
+		$watermark         = $watermark_results['data'];
+		if ($watermark == 0) {
+			db_install_execute('UPDATE settings SET name = "graph_watermark" WHERE name = "graph_watermark"');
 		} else {
-			db_install_execute('DELETE FROM settings WHERE name = "graph_wathermark"');
+			db_install_execute('DELETE FROM settings WHERE name = "graph_watermark"');
 		}
 	}
 }

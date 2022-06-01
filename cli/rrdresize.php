@@ -404,7 +404,7 @@ if ($scanned_directory['folders']) {
 						}
 					}
 
-					$ds_superfluos_ids = array();
+					$ds_superfluous_ids = array();
 
 					if ($ds_mismatch == true) {
 						if ($ds_error == 'missing') {
@@ -428,12 +428,12 @@ if ($scanned_directory['folders']) {
 						/* Additional ds found ! :| */
 						$ds_names = array_keys($rrd_info['ds']);
 						foreach ($tmp_ds as $tmp_ds_name => $tmp_ds_settings) {
-							$ds_superfluos_ids += array_keys($ds_names, $tmp_ds_name);
+							$ds_superfluous_ids += array_keys($ds_names, $tmp_ds_name);
 						}
 
 						f_notify('DS COUNT');
 						f_notify(false, "\033[0;35m[MISMATCH]\033[0m");
-						f_log('[NOTICE] Superfluous data sources \'' . implode(',', $ds_superfluos_ids) . '\' found: ' . $file);
+						f_log('[NOTICE] Superfluous data sources \'' . implode(',', $ds_superfluous_ids) . '\' found: ' . $file);
 					} else {
 						f_notify('DS COUNT');
 						f_notify(false, "\033[0;32m[MATCH]\033[0m");
@@ -525,7 +525,7 @@ if ($scanned_directory['folders']) {
 				$rrd_new_ds_definition = '';
 				$i = 0;
 				foreach ($rrd_info['ds'] as $rrd_info_ds_name => $rrd_info_ds_settings) {
-					if (!in_array($i, $ds_superfluos_ids)) {
+					if (!in_array($i, $ds_superfluous_ids)) {
 						$rrd_new_ds_definition__ds_definition_template = "\t<ds>" . PHP_EOL .
 							"\t\t<name> " . $rrd_info_ds_name . " </name>" . PHP_EOL .
 							"\t\t<type> " . $rrd_info_ds_settings['type'] . " </type>" . PHP_EOL .
@@ -638,8 +638,8 @@ if ($scanned_directory['folders']) {
 							}
 							if (isset($rrd_data['rra'][$selected_archive_index]['database']['row'][$calculated_index]['v'])) {
 								$row_copy = $rrd_data['rra'][$selected_archive_index]['database']['row'][$calculated_index]['v'];
-								if (!empty($ds_superfluos_ids)) {
-									foreach ($ds_superfluos_ids as $ds_superfluos_id) {
+								if (!empty($ds_superfluous_ids)) {
+									foreach ($ds_superfluous_ids as $ds_superfluos_id) {
 										unset($row_copy[$ds_superfluos_id]);
 									}
 								}
@@ -734,8 +734,8 @@ if ($scanned_directory['folders']) {
 								}
 							}
 
-							if (!empty($ds_superfluos_ids)) {
-								foreach ($ds_superfluos_ids as $ds_superfluos_id) {
+							if (!empty($ds_superfluous_ids)) {
+								foreach ($ds_superfluous_ids as $ds_superfluos_id) {
 									unset($consolidated_ds_values[$ds_superfluos_id]);
 								}
 							}

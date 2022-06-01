@@ -110,7 +110,7 @@ function form_save() {
 		WHERE local_graph_id = ?', array($local_graph_id));
 
 	/* if user disabled template propagation we need to get graph data from form */
-	if (!isset_request_var('template_propogation')) {
+	if (!isset_request_var('template_propagation')) {
 		$aggregate_template_id = 0;
 		$new_data = aggregate_validate_graph_params($_POST, false);
 	} else {
@@ -142,12 +142,12 @@ function form_save() {
 	 * if the graph is templates, we can simply ignore.  A simple check will
 	 * determine if aggregation propagation is enabled
 	 */
-	if (!isset_request_var('template_propogation')) {
+	if (!isset_request_var('template_propagation')) {
 		/* template propagation is disabled */
 		$save                          = array();
 		$save['id']                    = $aggregate_graph_id;
 		$save['aggregate_template_id'] = $aggregate_template_id;
-		$save['template_propogation']  = '';
+		$save['template_propagation']  = '';
 		$save['gprint_prefix']         = get_nfilter_request_var('gprint_prefix');
 		$save['gprint_format']         = isset_request_var('gprint_format') ? 'on':'';
 		$save['total_prefix']          = get_nfilter_request_var('total_prefix');
@@ -167,7 +167,7 @@ function form_save() {
 			$save_me = 0;
 
 			$save_me += ($old['aggregate_template_id'] != $save['aggregate_template_id']);
-			$save_me += ($old['template_propogation']  != $save['template_propogation']);
+			$save_me += ($old['template_propagation']  != $save['template_propagation']);
 			$save_me += ($old['gprint_prefix']         != $save['gprint_prefix']);
 			$save_me += ($old['gprint_format']         != $save['gprint_format']);
 			$save_me += ($old['graph_type']            != $save['graph_type']);
@@ -396,7 +396,7 @@ function form_actions() {
 				print "<tr>
 					<td class='textArea'>
 						<p>" . __('The selected Aggregate Graphs does not appear to have any matching Aggregate Templates.') . "</p>
-						<p>" . __('In order to migrate the Aggregate Graphs below use an Aggregate Template, one must already exist.  Please press \'Return\' and then first create your Aggergate Template before retrying.') . "</p>
+						<p>" . __('In order to migrate the Aggregate Graphs below use an Aggregate Template, one must already exist.  Please press \'Return\' and then first create your Aggregate Template before retrying.') . "</p>
 						<div class='itemlist'><ul>$graph_list</ul></div>
 					</td>
 				</tr>";
@@ -487,7 +487,7 @@ function form_actions() {
 				print "<tr><td class='even'><span class='textError'>" . __('You currently have no reports defined.') . "</span></td></tr>";
 				$save_html = "<input type='button' class='ui-button ui-corner-all ui-widget' value='" . __esc('Return') . "' onClick='cactiReturnTo()'>";
 			}
-		} elseif (get_request_var('drp_action') == '5') { // conver to a normal graph
+		} elseif (get_request_var('drp_action') == '5') { // convert to a normal graph
 			print "<tr>
 				<td colspan='2' class='textArea'>
 					<p>" . __('Click \'Continue\' to convert the following Aggregate Graph(s) into a normal Graph.') . "</p>
@@ -765,7 +765,7 @@ function graph_edit() {
 
 		if (!cacti_sizeof($graph)) {
 			html_start_box(__('Aggregate Preview Does Not Exist'), '100%', '', '3', 'center', '');
-			print "<tr><td id='imagewindow' class='center'>" . __('Aggreage Graph does not Exist') . '</tr></tr>';
+			print "<tr><td id='imagewindow' class='center'>" . __('Aggregate Graph does not Exist') . '</tr></tr>';
 			html_end_box(false);
 			raise_message('noaggregate', __('Aggregate Graph does not Exist'), MESSAGE_LEVEL_ERROR);
 			return false;
@@ -816,7 +816,7 @@ function graph_edit() {
 
 	form_start('aggregate_graphs.php', 'template_edit');
 
-	/* we will show the templated representation only when when there is a template and propagation is enabled */
+	/* we will show the templated representation only when there is a template and propagation is enabled */
 	if (!isempty_request_var('id') && $current_tab == 'details') {
 		if (cacti_sizeof($template)) {
 			print "<div id='templated'>";
@@ -912,11 +912,11 @@ function graph_edit() {
 			];
 
 			$(function() {
-				if ($('input[id^="agg_total"]').is(':checked') || $('#template_propogation').is(':checked')) {
+				if ($('input[id^="agg_total"]').is(':checked') || $('#template_propagation').is(':checked')) {
 					$('#agg_preview').show();
 				}
 
-				if ($('#template_propogation').is(':checked')) {
+				if ($('#template_propagation').is(':checked')) {
 					for (var i = 0; i < templated_selectors.length; i++) {
 						$(templated_selectors[i]).prop('disabled', true).addClass('ui-state-disabled');
 						if ($(templated_selectors[i]).selectmenu('instance')) {
@@ -924,7 +924,7 @@ function graph_edit() {
 						}
 					}
 				} else {
-					$('#row_template_propogation').hide();
+					$('#row_template_propagation').hide();
 					$('#row_spacer0').hide();
 				}
 
@@ -956,8 +956,8 @@ function graph_edit() {
 					changeTotalsType();
 				});
 
-				$('#template_propogation').change(function() {
-					if (!$('#template_propogation').is(':checked')) {
+				$('#template_propagation').change(function() {
+					if (!$('#template_propagation').is(':checked')) {
 						for (var i = 0; i < templated_selectors.length; i++) {
 							$(templated_selectors[i]).prop('disabled', false);
 						}
@@ -1549,7 +1549,7 @@ function aggregate_graph() {
 	}
 
 	$(function() {
-		if ($('input[id^="agg_total"]').is(':checked') || $('#template_propogation').is(':checked')) {
+		if ($('input[id^="agg_total"]').is(':checked') || $('#template_propagation').is(':checked')) {
 			$('#agg_preview').show();
 		}
 

@@ -126,7 +126,7 @@ INSERT INTO `table_columns` VALUES ('aggregate_graph_templates_item',9,'item_ski
 INSERT INTO `table_columns` VALUES ('aggregate_graph_templates_item',10,'item_total','char(2)','NO','',NULL,'');
 INSERT INTO `table_columns` VALUES ('aggregate_graphs',1,'id','int(10) unsigned','NO','PRI',NULL,'auto_increment');
 INSERT INTO `table_columns` VALUES ('aggregate_graphs',2,'aggregate_template_id','int(10) unsigned','NO','MUL',NULL,'');
-INSERT INTO `table_columns` VALUES ('aggregate_graphs',3,'template_propogation','char(2)','NO','','','');
+INSERT INTO `table_columns` VALUES ('aggregate_graphs',3,'template_propagation','char(2)','NO','','','');
 INSERT INTO `table_columns` VALUES ('aggregate_graphs',4,'local_graph_id','int(10) unsigned','NO','MUL',NULL,'');
 INSERT INTO `table_columns` VALUES ('aggregate_graphs',5,'title_format','varchar(128)','NO','MUL',NULL,'');
 INSERT INTO `table_columns` VALUES ('aggregate_graphs',6,'graph_template_id','int(10) unsigned','NO','',NULL,'');
@@ -1181,9 +1181,9 @@ INSERT INTO `table_indexes` VALUES ('data_template_data',1,'local_data_id',1,'lo
 INSERT INTO `table_indexes` VALUES ('data_template_data',1,'name_cache',1,'name_cache','A',13,NULL,NULL,'','BTREE','');
 INSERT INTO `table_indexes` VALUES ('data_template_data',0,'PRIMARY',1,'id','A',66,NULL,NULL,'','BTREE','');
 INSERT INTO `table_indexes` VALUES ('data_template_rrd',1,'data_template_id',1,'data_template_id','A',123,NULL,NULL,'','BTREE','');
-INSERT INTO `table_indexes` VALUES ('data_template_rrd',0,'duplicate_dsname_contraint',1,'local_data_id','A',12,NULL,NULL,'','BTREE','');
-INSERT INTO `table_indexes` VALUES ('data_template_rrd',0,'duplicate_dsname_contraint',2,'data_source_name','A',123,NULL,NULL,'','BTREE','');
-INSERT INTO `table_indexes` VALUES ('data_template_rrd',0,'duplicate_dsname_contraint',3,'data_template_id','A',123,NULL,NULL,'','BTREE','');
+INSERT INTO `table_indexes` VALUES ('data_template_rrd',0,'duplicate_dsname_constraint',1,'local_data_id','A',12,NULL,NULL,'','BTREE','');
+INSERT INTO `table_indexes` VALUES ('data_template_rrd',0,'duplicate_dsname_constraint',2,'data_source_name','A',123,NULL,NULL,'','BTREE','');
+INSERT INTO `table_indexes` VALUES ('data_template_rrd',0,'duplicate_dsname_constraint',3,'data_template_id','A',123,NULL,NULL,'','BTREE','');
 INSERT INTO `table_indexes` VALUES ('data_template_rrd',1,'local_data_id',1,'local_data_id','A',12,NULL,NULL,'','BTREE','');
 INSERT INTO `table_indexes` VALUES ('data_template_rrd',1,'local_data_template_rrd_id',1,'local_data_template_rrd_id','A',17,NULL,NULL,'','BTREE','');
 INSERT INTO `table_indexes` VALUES ('data_template_rrd',0,'PRIMARY',1,'id','A',123,NULL,NULL,'','BTREE','');

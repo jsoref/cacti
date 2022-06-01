@@ -628,7 +628,7 @@ function report_audit_results($output = true) {
 
 							$curr_seq = get_sequence_count($table_name, $i['idx_key_name']);
 
-							$curr_column_seq = get_colunm_sequence_number($table_name, $i['idx_key_name'], $i['idx_column_name']);
+							$curr_column_seq = get_column_sequence_number($table_name, $i['idx_key_name'], $i['idx_column_name']);
 
 							//print PHP_EOL . "Prop Seq:" . $prop_seq . ", Curr Seq:" . $curr_seq . PHP_EOL;
 
@@ -672,7 +672,7 @@ function report_audit_results($output = true) {
 	if ($output) {
 		print '---------------------------------------------------------------------------------------------' . PHP_EOL;
 		if (cacti_sizeof($alters)) {
-			print 'ERRORS are fixable using the --repair option.  WARNINGS will not be rapaired' . PHP_EOL;
+			print 'ERRORS are fixable using the --repair option.  WARNINGS will not be repaired' . PHP_EOL;
 			print 'due to ambiguous use of the column.' . PHP_EOL;
 		} else {
 			print 'Audit was clean, no errors or warnings' . PHP_EOL;
@@ -839,7 +839,7 @@ function get_sequence_count($table, $index) {
 	return $sequence_cnt;
 }
 
-function get_colunm_sequence_number($table, $index, $column) {
+function get_column_sequence_number($table, $index, $column) {
 	$indexes = db_fetch_assoc("SHOW INDEXES IN $table");
 
 	if (cacti_sizeof($indexes)) {
@@ -881,7 +881,7 @@ function create_tables($load = true) {
 	$exists_columns = db_table_exists('table_columns');
 
 	if (!$exists_columns) {
-		print "Failed to create 'table_coluns'";
+		print "Failed to create 'table_columns'";
 		exit;
 	}
 

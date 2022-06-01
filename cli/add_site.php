@@ -322,7 +322,7 @@ function mapDevices($siteId, $doMap) {
 	}
 
 	if ($ipMapRegex && !preg_match('/^\/.+\//',$ipMapRegex)) {
-		# Make it more restrictive too - add the ^ and $ anchors if the regex isn't specified correctly to stop sillyness
+		# Make it more restrictive too - add the ^ and $ anchors if the regex isn't specified correctly to stop silliness
 		$ipMapRegex = '/^'.$ipMapRegex.'$/';
 	}
 
@@ -488,7 +488,7 @@ function displayHelp($errorMessage = null) {
 	echoQuiet("    --postcode=[Zip or Postcode]  e.g. 'E14 2AA'\n");
 	echoQuiet("    --country=[Country]           e.g. 'United Kingdom'\n");
 	echoQuiet("    --timezone=[Timezone]         e.g. 'Europe/London'\n");
-	echoQuiet("    --latitude=[Latitutude]       e.g. '51.5115172'\n");
+	echoQuiet("    --latitude=[Latitude]       e.g. '51.5115172'\n");
 	echoQuiet("    --longitude=[Longitude]       e.g. '-0.0017868'\n");
 	echoQuiet("    --alt-name=[Alt. Name]        e.g. 'LINX Telehouse'\n");
 	echoQuiet("    --notes=[Site Notes]          e.g. 'Email: support@telehouse.net'\n\n");
@@ -552,7 +552,7 @@ function fetchCurl($url){
 	$header[] = "Connection: keep-alive";
 	$header[] = "Keep-Alive: 300";
 	$header[] = "Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7";
-	$header[] = "Accept-Language: en-us,en;q=0.5";
+	$header[] = "Accept-Langauge: en-us,en;q=0.5";
 
 
 	curl_setopt($curl, CURLOPT_URL, $url);

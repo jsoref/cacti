@@ -256,7 +256,7 @@ function aggregate_color_form_actions() {
 		} elseif (get_request_var('drp_action') == '3') { // sync
 			print "<tr>
 				<td class='textArea'>
-					<p>" . __n('Click \'Continue\' to Synchronize all Aggregate Graphs with the selected Color Template.', 'Click \'Continue\' to Syncrhonize all Aggregate Graphs with the selected Color Templates.', cacti_sizeof($color_array)) . "</p>
+					<p>" . __n('Click \'Continue\' to Synchronize all Aggregate Graphs with the selected Color Template.', 'Click \'Continue\' to Synchronize all Aggregate Graphs with the selected Color Templates.', cacti_sizeof($color_array)) . "</p>
 					<div class='itemlist'><ul>$color_list</ul></div></p>
 				</td>
 			</tr>";
@@ -450,7 +450,7 @@ function sync_color_templates($color_template) {
 		FROM aggregate_graphs_graph_item AS agi
 		LEFT JOIN aggregate_graphs AS ag
 		ON ag.id=agi.aggregate_graph_id
-		WHERE (ag.aggregate_template_id > 0 AND ag.template_propogation = "")
+		WHERE (ag.aggregate_template_id > 0 AND ag.template_propagation = "")
 		OR ag.aggregate_template_id = 0
 		AND agi.color_template = ?',
 		array($color_template));

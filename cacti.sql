@@ -175,7 +175,7 @@ CREATE TABLE `aggregate_graph_templates_item` (
 CREATE TABLE `aggregate_graphs` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `aggregate_template_id` int(10) unsigned NOT NULL,
-  `template_propogation` char(2) NOT NULL DEFAULT '',
+  `template_propagation` char(2) NOT NULL DEFAULT '',
   `local_graph_id` int(10) unsigned NOT NULL,
   `title_format` varchar(128) NOT NULL,
   `graph_template_id` int(10) unsigned NOT NULL,
@@ -211,7 +211,7 @@ CREATE TABLE `aggregate_graphs_graph_item` (
   `item_skip` char(2) NOT NULL,
   `item_total` char(2) NOT NULL,
   PRIMARY KEY (`aggregate_graph_id`,`graph_templates_item_id`)
-) ENGINE=InnoDB ROW_FORMAT=Dynamic COMMENT='Aggregate Graph Graph Items';
+) ENGINE=InnoDB ROW_FORMAT=Dynamic COMMENT='Aggregate Graph Items';
 
 --
 -- Table structure for table `aggregate_graphs_items`
@@ -1604,7 +1604,7 @@ CREATE TABLE data_template_rrd (
   t_data_input_field_id char(2),
   data_input_field_id mediumint(8) unsigned NOT NULL default '0',
   PRIMARY KEY (id),
-  UNIQUE KEY `duplicate_dsname_contraint` (`local_data_id`,`data_source_name`,`data_template_id`),
+  UNIQUE KEY `duplicate_dsname_constraint` (`local_data_id`,`data_source_name`,`data_template_id`),
   KEY local_data_id (local_data_id),
   KEY data_template_id (data_template_id),
   KEY local_data_template_rrd_id (local_data_template_rrd_id)
@@ -2424,7 +2424,7 @@ CREATE TABLE `reports` (
   KEY `mailtime` (`mailtime`)) 
   ENGINE=InnoDB 
   ROW_FORMAT=Dynamic
-  COMMENT='Cacri Reporting Reports';
+  COMMENT='Cacti Reporting Reports';
 
 --
 -- Table structure for table `reports_items`
@@ -2979,7 +2979,7 @@ CREATE TABLE `snmpagent_cache_notifications` (
   `sequence_id` smallint(6) NOT NULL,
   PRIMARY KEY (`name`,`mib`,`attribute`,`sequence_id`),
   KEY `name` (`name`)
-) ENGINE=InnoDB ROW_FORMAT=Dynamic COMMENT='Notifcations and related attributes';
+) ENGINE=InnoDB ROW_FORMAT=Dynamic COMMENT='Notifications and related attributes';
 
 --
 -- Dumping data for table `snmpagent_cache_notifications`

@@ -458,7 +458,7 @@ function graph_drilldown_icons($local_graph_id, $type = 'graph_buttons', $tree_i
 	print "<div class='iconWrapper'>";
 	print "<a class='iconLink utils' href='#' role='link' id='graph_" . $local_graph_id . "_util'><img class='drillDown' src='" . $config['url_path'] . "images/cog.png' alt='' title='" . __esc('Graph Details, Zooming and Debugging Utilities') . "'></a><br>";
 	print "<a class='iconLink csvexport' href='#' role='link' id='graph_" . $local_graph_id . "_csv'><img class='drillDown' src='" . $config['url_path'] . "images/table_go.png' alt='' title='" . __esc('CSV Export of Graph Data'). "'></a><br>";
-	print "<a class='iconLink mrgt' href='#' role='link' id='graph_" . $local_graph_id . "_mrtg'><img class='drillDown' src='" . $config['url_path'] . "images/timeview.png' alt='' title='" . __esc('Time Graph View'). "'></a><br>";
+	print "<a class='iconLink mrtg' href='#' role='link' id='graph_" . $local_graph_id . "_mrtg'><img class='drillDown' src='" . $config['url_path'] . "images/timeview.png' alt='' title='" . __esc('Time Graph View'). "'></a><br>";
 
 	if (is_realm_allowed(3)) {
 		$host_id = db_fetch_cell_prepared('SELECT host_id
@@ -599,7 +599,7 @@ function html_nav_bar($base_url, $max_pages, $current_page, $rows_per_page, $tot
 }
 
 /* html_header_sort - draws a header row suitable for display inside of a box element.  When
-        a user selects a column header, the collback function "filename" will be called to handle
+        a user selects a column header, the callback function "filename" will be called to handle
         the sort the column and display the altered results.
    @arg $header_items - an array containing a list of column items to display.  The
         format is similar to the html_header, with the exception that it has three
@@ -757,7 +757,7 @@ function html_header_sort($header_items, $sort_column, $sort_direction, $last_it
 
 /* html_header_sort_checkbox - draws a header row with a 'select all' checkbox in the last cell
         suitable for display inside of a box element.  When a user selects a column header,
-        the collback function "filename" will be called to handle the sort the column and display
+        the callback function "filename" will be called to handle the sort the column and display
         the altered results.
    @arg $header_items - an array containing a list of column items to display.  The
         format is similar to the html_header, with the exception that it has three
@@ -958,7 +958,7 @@ function html_header($header_items, $last_item_colspan = 1) {
 }
 
 /* html_section_header - draws a header row suitable for display inside of a box element
-         but for display as a secton title and not as a series of table header columns
+         but for display as a section title and not as a series of table header columns
    @arg $header_name - an array of the display name of the header for the section and
         optional alignment.
    @arg $last_item_colspan - the TD 'colspan' to apply to the last cell in the row */
@@ -1022,9 +1022,9 @@ function html_header_checkbox($header_items, $include_form = true, $form_action 
         -- or --
         $array[0]["id"] = 43;
         $array[0]["name"] = "Red";
-   @arg $column_display - used to indentify the key to be used for display data. this
+   @arg $column_display - used to identify the key to be used for display data. this
         is only applicable if the array is formatted using the second method above
-   @arg $column_id - used to indentify the key to be used for id data. this
+   @arg $column_id - used to identify the key to be used for id data. this
         is only applicable if the array is formatted using the second method above
    @arg $form_previous_value - the current value of this form element */
 function html_create_list($form_data, $column_display, $column_id, $form_previous_value) {
@@ -1521,7 +1521,7 @@ function draw_menu($user_menu = '') {
         on one or more data elements
    @arg $actions_array - an array that contains a list of possible actions. this array should
         be compatible with the form_dropdown() function
-   @arg $delete_action - if there is a delete action that should surpress removal of rows
+   @arg $delete_action - if there is a delete action that should suppress removal of rows
         specify it here.  If you don't want any delete actions, set to 0.*/
 function draw_actions_dropdown($actions_array, $delete_action = 1) {
 	global $config;
@@ -1637,7 +1637,7 @@ function form_area($text) { ?>
 	</tr>
 <?php }
 
-/* is_console_page - determinese if current passed url is considered to be
+/* is_console_page - determines if current passed url is considered to be
           a console page
    @arg url - url to be checked
    @returns true if console page, false if not
@@ -1711,7 +1711,7 @@ function html_show_tabs_left() {
 
 		if ($realm_allowed[21] || $realm_allowed[22]) {
 			if ($config['poller_id'] > 1) {
-				// Don't show reports tabe if not poller 1
+				// Don't show reports table if not poller 1
 			} else {
 				if (substr_count($_SERVER['REQUEST_URI'], 'reports_')) {
 					print '<a id="tab-reports" href="' . $config['url_path'] . ($realm_allowed[22] ? 'reports_admin.php':'reports_user.php') . '"><img src="' . $config['url_path'] . 'images/tab_nectar_down.gif" alt="' . __('Reporting') . '"></a>';
@@ -2242,7 +2242,7 @@ function html_spikekill_menu($local_graph_id) {
 
 	$rkills  = '';
 	foreach ($settings['spikes']['spikekill_number']['array'] as $key => $value) {
-		$rkills .= html_spikekill_menu_item($value,html_spikekill_setting('spikekill_number') == $key ? 'fa fa-check':'fa', 'skkills', 'kills_' . $key);
+		$rkills .= html_spikekill_menu_item($value,html_spikekill_setting('spikekill_number') == $key ? 'fa fa-check':'fa', 'skills', 'kills_' . $key);
 	}
 	$rkills  = html_spikekill_menu_item(__('Kills Per RRA'), '', '', '', '', $rkills);
 
@@ -2389,8 +2389,8 @@ function html_spikekill_js() {
 				});
 		});
 
-		$('.skkills').unbind().click(function() {
-			$('.skkills').find('i').removeClass('fa fa-check');
+		$('.skills').unbind().click(function() {
+			$('.skills').find('i').removeClass('fa fa-check');
 			$(this).find('i:first').addClass('fa fa-check');
 			$(this).find('.spikekillMenu').menu('destroy').parent().remove();
 
@@ -2498,7 +2498,7 @@ function html_common_header($title, $selectedTheme = '') {
 		var noFileSelected='<?php print __esc('No file selected');?>';
 		var timeGraphView='<?php print __esc('Time Graph View');?>';
 		var filterSettingsSaved='<?php print __esc('Filter Settings Saved');?>';
-		var spikeKillResuls='<?php print __esc('SpikeKill Results');?>';
+		var spikeKillResults='<?php print __esc('SpikeKill Results');?>';
 		var utilityView='<?php print __esc('Utility View');?>';
 		var realtimeClickOn='<?php print __esc('Click to view just this Graph in Realtime');?>';
 		var realtimeClickOff='<?php print __esc('Click again to take this Graph out of Realtime');?>';
@@ -3140,7 +3140,7 @@ function twig_common_header($title, $selectedTheme = '') {
 			'noFileSelected'                 => "'" . __esc('No file selected') . "'",
 			'timeGraphView'                  => "'" . __esc('Time Graph View') . "'",
 			'filterSettingsSaved'            => "'" . __esc('Filter Settings Saved') . "'",
-			'spikeKillResuls'                => "'" . __esc('SpikeKill Results') . "'",
+			'spikeKillResults'                => "'" . __esc('SpikeKill Results') . "'",
 			'utilityView'                    => "'" . __esc('Utility View') . "'",
 			'realtimeClickOn'                => "'" . __esc('Click to view just this Graph in Realtime') . "'",
 			'realtimeClickOff'               => "'" . __esc('Click again to take this Graph out of Realtime') . "'",

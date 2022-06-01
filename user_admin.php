@@ -2072,7 +2072,7 @@ function user_edit() {
 
 				var data = {
 					password: $('#password').val(),
-					password_confim: $('#password_confirm').val(),
+					password_confirm: $('#password_confirm').val(),
 					__csrf_magic: csrfMagicToken
 				}
 

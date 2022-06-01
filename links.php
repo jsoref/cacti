@@ -601,7 +601,7 @@ function edit_page() {
 				$('#row_consolenewsection').hide();
 			} else {
 				$('#row_consolesection').show();
-				setConsoleNewSectionVisibity();
+				setConsoleNewSectionVisibility();
 			}
 		}).change();
 
@@ -612,11 +612,11 @@ function edit_page() {
 		// if you change the section, make the 'new' textbox reflect it
 		// if you change it to 'new', then clear the textbox, and jump to it
 		$('#consolesection').change(function() {
-			setConsoleNewSectionVisibity();
+			setConsoleNewSectionVisibility();
 		}).change();
 	});
 
-	function setConsoleNewSectionVisibity() {
+	function setConsoleNewSectionVisibility() {
 		if ($('#consolesection').val() == '__NEW__') {
 			$('#row_consolenewsection').show();
 			$('#consolenewsection').focus();

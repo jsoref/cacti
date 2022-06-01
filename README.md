@@ -36,7 +36,7 @@ is now.  When The Cacti Group went about engineering Cacti 1.x, a decision was
 made to force users to use the InnoDB storage engine for many of the Tables.  This
 was done as the InnoDB storage engine provides a better user experience when your
 web site has several concurrent logins.  Though a little slower, it also provides
-greater resiliancy for the developers.
+greater resiliency for the developers.
 
 With that said, there are several changes that you MUST perform to MySQL/MariaDB 
 before you upgrade, and a service restart is required.  Depending on your release
@@ -46,7 +46,7 @@ enabled as default:
 ```
 [mysqld]
 
-# required for multiple language support
+# required for multiple langauge support
 character-set-server = utf8mb4
 collation-server = utf8mb4_unicode_ci
 
@@ -88,7 +88,7 @@ upgrading.  The settings with XXX, Cacti will provide a recommendation at upgrad
 It is not out of the ordinary to have to restart MySQL/MariaDB during the upgrade
 to tune these settings.  Please make special note of this before you begin your upgrade.
 
-Before you upgrade, you should make these required changes, then restart MySQL/MariaDB.  After that, you can save yourself some time and poential errors by running the following scripts (assuming you are using bash):
+Before you upgrade, you should make these required changes, then restart MySQL/MariaDB.  After that, you can save yourself some time and potential errors by running the following scripts (assuming you are using bash):
 
 ```
 for table in `mysql -e "SELECT TABLE_NAME FROM information_schema.TABLES WHERE table_schema='cacti' AND engine!='MEMORY'" cacti | grep -v TABLE_NAME`;
@@ -203,9 +203,9 @@ submit a pull request to help improve the documentation on
 
 ### Check out the Cacti Group's Official YouTube channel 
 
-If you would have any ideas for videos or would like to contibute let us know !
+If you would have any ideas for videos or would like to contribute let us know !
 
-[Cacti Official Youtube Channel](https://www.youtube.com/channel/UC6ROmUGuuLa9BdHWzvGSY1w)
+[Cacti Official YouTube Channel](https://www.youtube.com/channel/UC6ROmUGuuLa9BdHWzvGSY1w)
 
 ### GitHub Development
 

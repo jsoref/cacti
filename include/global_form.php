@@ -169,7 +169,7 @@ $fields_snmp_item_with_oids = $fields_snmp_item + array(
 	),
 	'bulk_walk_size' => array(
 		'method'        => 'drop_array',
-		'friendly_name' => __('Bulk Walk Maximum Repititions'),
+		'friendly_name' => __('Bulk Walk Maximum Repetitions'),
 		'description'   => __('For SNMPv2 and SNMPv3 Devices, the SNMP Bulk Walk max-repetitions size. The default is to \'Auto Detect on Re-Index\'. For very large switches, high performance servers, Jumbo Frame Networks or for high latency WAN connections, increasing this value may increase poller performance. More data is packed into a single SNMP packet which can reduce data query run time. However, some devices may completely refuse to respond to packets with a max-repetition size which is set too large. This can be especially true for lower-powered IoT type devices or smaller embedded IT appliances. Special attention to the overall network path MTU should also be considered since setting a value which is too high could lead to packet fragmentation.'),
 		'value'         => '|arg1:bulk_walk_size|',
 		'default'       => '-1',
@@ -177,21 +177,21 @@ $fields_snmp_item_with_oids = $fields_snmp_item + array(
 			-1 => __('Auto Detect on Re-Index'),
 			0  => __('Auto Detect/Set on first Re-Index'),
 			1  => __('%d Repitition', 1),
-			2  => __('%d Repititions', 2),
-			3  => __('%d Repititions', 3),
-			4  => __('%d Repititions', 4),
-			5  => __('%d Repititions', 5),
-			10 => __('%d Repititions', 10),
-			15 => __('%d Repititions', 15),
-			20 => __('%d Repititions', 20),
-			25 => __('%d Repititions', 25),
-			30 => __('%d Repititions', 30),
-			35 => __('%d Repititions', 35),
-			40 => __('%d Repititions', 40),
-			45 => __('%d Repititions', 45),
-			50 => __('%d Repititions', 50),
-			55 => __('%d Repititions', 55),
-			60 => __('%d Repititions', 60)
+			2  => __('%d Repetitions', 2),
+			3  => __('%d Repetitions', 3),
+			4  => __('%d Repetitions', 4),
+			5  => __('%d Repetitions', 5),
+			10 => __('%d Repetitions', 10),
+			15 => __('%d Repetitions', 15),
+			20 => __('%d Repetitions', 20),
+			25 => __('%d Repetitions', 25),
+			30 => __('%d Repetitions', 30),
+			35 => __('%d Repetitions', 35),
+			40 => __('%d Repetitions', 40),
+			45 => __('%d Repetitions', 45),
+			50 => __('%d Repetitions', 50),
+			55 => __('%d Repetitions', 55),
+			60 => __('%d Repetitions', 60)
 		)
 	)
 );
@@ -1769,7 +1769,7 @@ $fields_template_import = array(
 			'method' => 'drop_array',
 			'value' => '|arg1:snmp_message_type|',
 			'default' => '1',
-			'array' => array(1 => 'NOTICATIONS', 2 => 'INFORMS')
+			'array' => array(1 => 'NOTIFICATIONS', 2 => 'INFORMS')
 			),
 		'addition_header' => array(
 			'method' => 'spacer',
@@ -1879,12 +1879,12 @@ $struct_aggregate_graph = array(
 		'value' => '|arg1:title_format|',
 		'size' => '80'
 	),
-	'template_propogation' => array(
+	'template_propagation' => array(
 		'friendly_name' => __('Propagation Enabled'),
 		'description' => __('Is this to carry the template?'),
 		'method' => 'checkbox',
 		'default' => '',
-		'value' => '|arg1:template_propogation|'
+		'value' => '|arg1:template_propagation|'
 	),
 	'spacer1' => array(
 		'friendly_name' => __('Aggregate Graph Settings'),
