@@ -205,7 +205,7 @@ submit a pull request to help improve the documentation on
 
 If you would have any ideas for videos or would like to contribute let us know !
 
-[Cacti Official Youtube Channel](https://www.youtube.com/channel/UC6ROmUGuuLa9BdHWzvGSY1w)
+[Cacti Official YouTube Channel](https://www.youtube.com/channel/UC6ROmUGuuLa9BdHWzvGSY1w)
 
 ### GitHub Development
 
