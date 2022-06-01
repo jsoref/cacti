@@ -1224,7 +1224,7 @@ Cacti CHANGELOG
 -issue#2153: Utilities page issues the wrong hook for tabs
 -issue#2163: LDAP functions are not consistent
 -issue#2164: Login page does not remember selected realm
--issue#2171: datepicker and timepick translation not available
+-issue#2171: datepicker and timepicker translation not available
 -issue#2178: Header/Footer included more than once
 -issue#2182: Graph View missing 'html_graph_template_multiselect()' function
 -issue#2184: html_host_filter() does not handle host_id consequently
