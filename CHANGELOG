@@ -499,7 +499,7 @@ Cacti CHANGELOG
 -issue#3507: Changes to JavaScript's Storage API cause exceptions to be thrown
 -issue#3510: Only guests can actually guest only pages, logged in users are denied access incorrectly
 -issue#3512: When plugins update, registered files list cannot always be updated
--issue#3520: When viewing graphs, shifting time does not work when using non-english langauges
+-issue#3520: When viewing graphs, shifting time does not work when using non-english languages
 -issue#3576: LDAP Authentication succeeds, but login fails due to bad session handling
 -issue#3629: Log files are not rotated properly on remote pollers
 -feature#3480: Created 'custom_denied' hook to allow customisation of permission denied notifications
@@ -1269,7 +1269,7 @@ Cacti CHANGELOG
 -issue#1464: Poller stuck in infinitely loop causing excess logging
 -issue#1466: No scrollbars in mobile browsers
 -issue#1468: Increase max length of host.snmp_sysObjectID column
--issue#1471: Undefined function found in global_langauges.php
+-issue#1471: Undefined function found in global_languages.php
 -issue#1472: Change Device Options - Style needs updating
 -issue#1474: Check possibility for creation of temporary tables on install
 -issue#1487: Undefined constant in ldap.php
@@ -1376,7 +1376,7 @@ Cacti CHANGELOG
 
 1.1.32
 -issue#969: Undefined index: color_id / task_item when viewing graphs
--issue#1166: Fix typo of 'locale' in global_langauges.php
+-issue#1166: Fix typo of 'locale' in global_languages.php
 -issue#1222: Graphs with large number of items causes RRDTool to error
 -issue#1230: PHP Fatal error: Call to undefined function get_max_tree_sequence()
 -issue#1238: SNMP functions fail to handle "Invalid object identifier" error

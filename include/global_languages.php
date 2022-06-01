@@ -611,7 +611,7 @@ function get_installed_locales() {
 	global $config, $lang2locale;
 
 	$locations = array();
-	$supported_langauges['en-US'] = $lang2locale['en-US']['langauge'];
+	$supported_languages['en-US'] = $lang2locale['en-US']['langauge'];
 	foreach ($lang2locale as $locale => $properties) {
 		$locations[$properties['filename'] . '.mo'] = array(
 			'locale'   => $locale,
@@ -623,19 +623,19 @@ function get_installed_locales() {
 		);
 	}
 
-	/* create a list of all langauges this Cacti system supports ... */
+	/* create a list of all languages this Cacti system supports ... */
 	$dhandle = opendir($config['base_path'] . '/locales/LC_MESSAGES');
 	if (is_resource($dhandle)) {
 		while (false !== ($filename = readdir($dhandle))) {
 			if (isset($locations[$filename]['langauge'])) {
-				$supported_langauges[$locations[$filename]['locale']] = $locations[$filename]['langauge'];
+				$supported_languages[$locations[$filename]['locale']] = $locations[$filename]['langauge'];
 			}
 		}
 	}
 
-	asort($supported_langauges);
+	asort($supported_languages);
 
-	return $supported_langauges;
+	return $supported_languages;
 }
 
 /* read_user_i18n_setting - finds the current value of a i18n configuration setting

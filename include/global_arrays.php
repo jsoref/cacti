@@ -1832,7 +1832,7 @@ $i18n_weekdays_short = array(
 	'Sat'	=> __x('A textual representation of a day, three letters', 'Sat')
 );
 
-$i18n_langauges = array(
+$i18n_languages = array(
 	__('Arabic'),
 	__('Bulgarian'),
 	__('Chinese (China)'),
