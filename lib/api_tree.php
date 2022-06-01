@@ -1562,7 +1562,7 @@ function api_tree_set_branch_sort_type($nodetype, $nodeid) {
 	}
 }
 
-/* api_tree_sort_recursive - sort a tree branch and its siblines recursively
+/* api_tree_sort_recursive - sort a tree branch and its siblings recursively
  * This function given a branch id within a tree and a tree id, will sort it recursively
  * @returns - null */
 function api_tree_sort_recursive($branch, $tree_id) {
