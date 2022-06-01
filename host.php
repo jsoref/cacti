@@ -1809,7 +1809,7 @@ function host() {
 			'display' => __('Created'),
 			'align' => 'right',
 			'sort' => 'ASC',
-			'tip' => __('The date this device wasadded to the database'),
+			'tip' => __('The date this device was added to the database'),
 		),
 	);
 
