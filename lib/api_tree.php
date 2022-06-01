@@ -125,7 +125,7 @@ function api_tree_lock($tree_ids, $user_id = 0) {
 	}
 }
 
-/* api_tree_unlock - unlockes a locked tree or trees that have been locked for editing
+/* api_tree_unlock - unlocks a locked tree or trees that have been locked for editing
  * @arg $tree_ids - the tree id or ids
  * @arg $user_id - the user id
  * @returns - true or false */
