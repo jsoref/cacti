@@ -3015,7 +3015,7 @@ Cacti CHANGELOG
 -feature: Force export functions into a separate poller process.
 -feature: Force re-caching of data queries into a separate poller process.
 -feature: Added filter capability to graph list view mode.
--feature: Enhanced ss_fping.php and ping.php to inclue ICMP, TCP and UDP ping functionality and to specify a port.
+-feature: Enhanced ss_fping.php and ping.php to include ICMP, TCP and UDP ping functionality and to specify a port.
 
 0.8.6f
 -security: Hardened PHP Project Advisory #042005 - Cacti Authentication/Addslashes Bypass Vulnerability
