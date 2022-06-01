@@ -46,7 +46,7 @@ Cacti CHANGELOG
 -feature#3943: Add hooks for plugins to show customize graph source and customize template url (List View)
 -feature#4291: When creating data query associations, auto select matching source
 -feature#4296: Add hyperlink from graph edit page to graph-view
--feature#4300: Allow GPrint/CDef/VDef to be visibile in graph template item lists
+-feature#4300: Allow GPrint/CDef/VDef to be visible in graph template item lists
 -feature#4339: Change CLI progress output for rebuilding poller cache
 -feature#4537: Update phpseclib to 2.0.35
 
