@@ -1330,7 +1330,7 @@ Cacti CHANGELOG
 -issue#981: Hyperlinks for Data Profile stats
 -issue#993: Realtime not working on remote pollers for certain data query
 -issue#1244: Errors importing templates with deprecated hashes
--issue#1251: Allow zoom out through mouse mmiddle button
+-issue#1251: Allow zoom out through mouse middle button
 -issue#1281: Max OIDs setting is for bulkget and not bulkwalk operations
 -issue#1286: Correct CHUNKED_ENCODING error when retrieving graph with some browsers
 -issue#1306: Graphs are not always refreshed properly
